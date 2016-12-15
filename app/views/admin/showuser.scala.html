@@ -1,0 +1,84 @@
+@(findUserForm: Form[Application.FindUser], userEmail: String, userName: String, userRole: String)
+
+@main(null) {
+
+<section id="signup">
+	<!-- Start Formoid form-->
+	<form id="showuser" class="formoid-solid-dark"
+		style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS', 'Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+		method="post" action="@routes.Application.updateUser()">
+		<div class="title">
+			<h2>User Maintenance</h2>
+		</div>
+		<div class="element-input">
+			<label class="title"><span class="required">*</span>User
+				Name:</label>
+			<div class="item-cont">
+				<input class="large" type="text" name="fullname" required="required" 
+					placeholder="Choose a user name..." value="@userName" /><span class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-input">
+			<label class="title">Email:</label>
+			<div class="item-cont">
+				<input class="large" type="email" name="email" readonly style="color: #dddddd;" 
+					placeholder="Enter your email..." value="@userEmail" /><span class="icon-place"></span>
+			</div>
+		</div>
+		<div class="element-select">
+			<label class="title"><span class="required">*</span>Account
+			Role:</label>
+			<div class="item-cont">
+				<div class="large">
+					<span>
+						<select name="role" value="@userRole" required="required">
+						@if(userRole == "user") {
+							<option value="none">Select Role...</option>
+							<option value="user" selected>Business User</option>
+							<option value="manager">Emergency Manager</option>
+						}
+						else {
+							<option value="none">Select Role...</option>
+							<option value="user">Business User</option>
+							<option value="manager" selected>Emergency Manager</option>
+						}
+						</select>
+						<i></i><span class="icon-place"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="element-radio">
+ 			<label class="title"><strong>Approve/Deny Emergency Manager</strong></label>
+  			<div class="column column1">
+ 				<label>
+ 					<input type="radio" name="approved" value="Y" /><span>Approve</span>
+ 				</label>
+ 				<label>
+ 					<input
+ 					type="radio" name="approved" value="N" /><span>Deny</span>
+ 				</label>
+ 			</div>
+  			<span class="clearfix"></span>
+  		</div>	
+		<div class="element-input">
+		    @if(findUserForm.hasGlobalErrors) {
+        		<span class="errorMessageDisplay" style="color: #d9534f;">
+            		@findUserForm.globalError.message
+        		</span>
+   			}
+		</div>
+		<div class="submit">
+			<input type="submit" value=@Messages("submit") />
+			<a href="/admin" class="buttonCancel">@Messages("goback")</a>
+		</div>
+		<div class="submit">
+			<a href="javascript:deleteUser('@userEmail')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
+		</div>
+		<!-- This is needed for bottom shadow to appear... -->
+		<div></div>
+	</form>
+
+</section>
+
+}
