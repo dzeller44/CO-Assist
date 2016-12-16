@@ -61,9 +61,6 @@ public class RemovedProfile extends Model {
 	
 	@Constraints.Required
 	public String billcountry;
-	
-	@Constraints.Required
-	public String billcounty;
 
 	@Constraints.Required
 	public String primaryNameFirst;
@@ -88,6 +85,14 @@ public class RemovedProfile extends Model {
 
 	@Constraints.Required
 	public String secondaryEmail;
+	
+	public String secondaryNameFirst2;
+
+	public String secondaryNameLast2;
+
+	public String secondaryPhone2;
+
+	public String secondaryEmail2;
 
 	@Constraints.Required
 	public String services;

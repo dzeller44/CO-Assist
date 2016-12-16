@@ -16,6 +16,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
+import controllers.helpers.AccessMiddleware;
 
 import javax.inject.Inject;
 
@@ -40,8 +41,9 @@ import static play.data.Form.form;
 
 /**
  * Signup to PlayStartApp : save and send confirm mail.
- * <p/>
- * User: yesnault Date: 31/01/12
+ * 
+ * Created by: yesnault Date: 31/01/12
+ * Edited by: dzeller, cwyatt
  */
 public class Signup extends Controller {
 	@Inject
@@ -105,7 +107,6 @@ public class Signup extends Controller {
 			user.confirmationToken = UUID.randomUUID().toString();
 			user.userkey = user.createUserKey();
 			user.dateCreation = new Date();
-			user.active = "Y";
 			// Custom fields...
 			String role = register.role;
 			switch (role) {
@@ -122,6 +123,10 @@ public class Signup extends Controller {
 				user.role = RoleType.UNDEFINED;
 				break;
 			}
+			
+			user.dateCreation = new Date();
+			user.updatedBy = AccessMiddleware.getSessionEmail();
+			user.dateUpdated = new Date();
 			// Create reminder dates...
 			// Update account...
 			Calendar cal = null;
@@ -141,11 +146,10 @@ public class Signup extends Controller {
 
 			// if user.role is "manager" set approved to "N"
 			if (role.compareTo("manager") == 0) {
-				// RoleType.MANAGER == 2
 				user.approved = "N";
 				user.save();
 				
-				String admin = Messages.get("mail.admin.address");
+				String admin = Messages.get("email.principal.address");
 				
 				sendMailAdminConfirm(admin, user.getEmail());
 				
@@ -189,7 +193,8 @@ public class Signup extends Controller {
 			// user.confirmationToken = null;
 			// user.validated = true;
 			user.dateCreation = new Date();
-			user.active = "Y";
+			user.updatedBy = AccessMiddleware.getSessionEmail();
+			user.dateUpdated = new Date();
 			user.role = RoleType.ADMIN;
 			user.save();
 

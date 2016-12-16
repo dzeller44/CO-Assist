@@ -63,8 +63,6 @@ public class User extends Model {
 
 	public String approved;
 
-	public String active;
-
 	@Constraints.Required
 	@Formats.NonEmpty
 	public String userkey;
