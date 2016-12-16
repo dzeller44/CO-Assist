@@ -12,7 +12,7 @@ reset=Reset
 cancel=Cancel
 submit=Submit
 
-email.principal.address=co-assist@state.co.us
+email.principal.address=cdps_dhsem_co-assist@state.co.us
 email.remind.subject=CO-Assist: Please update your User Profile.
 email.remind.message=Please take the time to update your CO-Assist User Profile.
 
@@ -92,7 +92,6 @@ mail.welcome.subject=Welcome to CO-Assist
 mail.welcome.message=Welcome to CO-Assist. <br> Your account is validated. Enjoy !
 
 mail.contact.subject=Message from CO-Assist
-mail.admin.address=coassist@gmail.com
 
 mail.reset.ask.subject=CO-Assist - New password
 # Cannot use You've unescaped here, as the single quote stops the {0}

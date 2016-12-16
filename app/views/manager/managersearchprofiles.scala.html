@@ -126,11 +126,11 @@
 			<tbody>
 				@for(profile <- profilesList) {
 				<tr>
-					<td><a href="/editprofile/@profile.profilekey">@profile.name</a></td>
- 					<td><a href="/editprofile/@profile.profilekey">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
- 					<td><a href="/editprofile/@profile.profilekey">@profile.primaryPhone</a></td>
- 					<td><a href="/editprofile/@profile.profilekey">@profile.services</a></td>
- 					<td><a href="/editprofile/@profile.profilekey">@profile.county</a></td>
+					<td><a href="/viewProfileManager/@profile.profilekey">@profile.name</a></td>
+ 					<td><a href="/viewProfileManager/@profile.profilekey">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
+ 					<td><a href="/viewProfileManager/@profile.profilekey">@profile.primaryPhone</a></td>
+ 					<td><a href="/viewProfileManager/@profile.profilekey">@profile.services</a></td>
+ 					<td><a href="/viewProfileManager/@profile.profilekey">@profile.county</a></td>
 				</tr>
 				} 
 			</tbody>
