@@ -117,8 +117,10 @@
 			<thead>
 				<tr>
 					<th>Business Name</th>
-					<th>Contact</th>
-					<th>Phone</th>
+					<th>Business Hours Contact</th>
+					<th>Business Hours Phone</th>
+					<th>After Hours Contact</th>
+					<th>After Hours Phone</th>
 					<th>Services</th>
 					<th>County</th>
 				</tr>
@@ -129,6 +131,8 @@
 					<td><a href="/viewProfileManager/@profile.profilekey">@profile.name</a></td>
  					<td><a href="/viewProfileManager/@profile.profilekey">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
  					<td><a href="/viewProfileManager/@profile.profilekey">@profile.primaryPhone</a></td>
+ 					<td><a href="/viewProfileManager/@profile.profilekey">@profile.secondaryNameFirst @profile.secondaryNameLast</a></td>
+ 					<td><a href="/viewProfileManager/@profile.profilekey">@profile.secondaryPhone</a></td>
  					<td><a href="/viewProfileManager/@profile.profilekey">@profile.services</a></td>
  					<td><a href="/viewProfileManager/@profile.profilekey">@profile.county</a></td>
 				</tr>
@@ -136,6 +140,8 @@
 			</tbody>
 		</table>
 		</div>
-		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export This View</a></div>	
+		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export All</a></div>	
 	</section>
+	
+	
 }

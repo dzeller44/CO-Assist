@@ -54,7 +54,7 @@ import views.html.admin.admin;
 import views.html.admin.usermaint;
 import views.html.admin.getuser;
 import views.html.admin.showuser;
-import views.html.admin.showprofile;
+import views.html.manager.showprofile;
 import views.html.admin.displayuser;
 import views.html.admin.openuser;
 import views.html.admin.saveduser;
@@ -1323,7 +1323,7 @@ public class Application extends Controller {
 	
 				default:
 					profiles = Profile.find.all();
-					fileName = "all_profiles";
+					fileName = "COASSIST_all_data";
 					break;
 				}
 	
@@ -1357,9 +1357,40 @@ public class Application extends Controller {
 	
 	}
 
+	public Result exportOpenFile(String fileName) {
+		// Check Role...
+		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
+			return ACCESS_DENIED;
+		} else {
+			// Open the file that was exported...
+			try {
+				Desktop.getDesktop().open(new File(fileName));
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 	
+			RoleType role = AccessMiddleware.getSessionRole();
+			if (role != null) {
+				switch (role.toString()) {
+				case "1":
+					return GO_USER;
 	
+				case "2":
+					return GO_MANAGER;
 	
+				case "3":
+					return GO_ADMIN;
+	
+				default:
+					return GO_HOME;
+	
+				}
+			} else {
+				return GO_HOME;
+			}
+		}
+	}
+
 	/********************************************************************************
 	 End Profile Section - Create, edit, delete a business profile
 	 ********************************************************************************/
@@ -1556,40 +1587,7 @@ public class Application extends Controller {
 	
 	}
 
-	public Result exportOpenFile(String fileName) {
-		// Check Role...
-		if (hasCorrectAccess(RoleType.ADMIN) != true && hasCorrectAccess(RoleType.MANAGER) != true) {
-			return ACCESS_DENIED;
-		} else {
-			// Open the file that was exported...
-			try {
-				Desktop.getDesktop().open(new File(fileName));
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-	
-			RoleType role = AccessMiddleware.getSessionRole();
-			if (role != null) {
-				switch (role.toString()) {
-				case "1":
-					return GO_USER;
-	
-				case "2":
-					return GO_MANAGER;
-	
-				case "3":
-					return GO_ADMIN;
-	
-				default:
-					return GO_HOME;
-	
-				}
-			} else {
-				return GO_HOME;
-			}
-		}
-	}
-	
+
 	/********************************************************************************
 	 End login, logout and access control
 	 ********************************************************************************/
