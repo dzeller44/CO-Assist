@@ -47,6 +47,7 @@
 							<span>
 								<select name="county" required="required">
 									<option disabled="disabled">--- Select a county ---</option>
+									<option @if(profile.county == "Statewide") {selected="selected"}>Statewide</option>
 									<option @if(profile.county == "Adams") {selected="selected"}>Adams</option>
 									<option @if(profile.county == "Alamosa") {selected="selected"}>Alamosa</option>
 									<option @if(profile.county == "Arapahoe") {selected="selected"}>Arapahoe</option>

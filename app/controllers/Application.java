@@ -1209,7 +1209,7 @@ public class Application extends Controller {
 		} else {
 			List<Profile> profiles = Profile.find.all();
 			List<Service> services = Service.find.all();
-			return ok(searchprofiles.render(profiles, services));
+			return ok(searchprofiles.render(profiles, services, "All"));
 		}
 	}
 
@@ -1220,7 +1220,7 @@ public class Application extends Controller {
 		} else {
 			List<Profile> profiles = Profile.find.all();
 			List<Service> services = Service.find.all();
-			return ok(managersearchprofiles.render(profiles, services));
+			return ok(managersearchprofiles.render(profiles, services, "All"));
 		}
 	}
 
@@ -1245,7 +1245,10 @@ public class Application extends Controller {
 				profiles = Profile.findAllByCounty(county);
 			}
 			List<Service> services = Service.find.all();
-			return ok(searchprofiles.render(profiles, services));
+			RoleType currentRole = AccessMiddleware.getSessionRole();
+			if (currentRole == RoleType.ADMIN){
+			return ok(searchprofiles.render(profiles, services, county + " County"));
+			} else return ok(managersearchprofiles.render(profiles, services, county + " County"));
 		}
 	}
 
@@ -1262,7 +1265,10 @@ public class Application extends Controller {
 				profiles = Profile.findAllByService(service);
 			}
 			List<Service> services = Service.find.all();
-			return ok(searchprofiles.render(profiles, services));
+			RoleType currentRole = AccessMiddleware.getSessionRole();
+			if (currentRole == RoleType.ADMIN){
+			return ok(searchprofiles.render(profiles, services, service));
+			} else return ok(managersearchprofiles.render(profiles, services, service));
 		}
 	}
 
@@ -1319,33 +1325,50 @@ public class Application extends Controller {
 			}
 	
 			try {
-				switch (whatData) {
-	
-				default:
+			    if (whatData.contains("County")){
+			    	int i = whatData.indexOf(" ");
+			    	whatData = whatData.substring(0,i);
+			    }
+			    
+				if (whatData.compareTo("All") == 0){
 					profiles = Profile.find.all();
 					fileName = "COASSIST_all_data";
-					break;
+				} else {
+				
+					List servicesList = Profile.findAllByService(whatData);
+					List countyList = Profile.findAllByCounty(whatData);
+				
+					if (servicesList.size() > 0){
+						profiles = servicesList;
+						fileName = "COASSIST_"+whatData+"_data";
+					}
+				
+					if  (countyList.size() > 0){
+						profiles = countyList;
+						fileName = "COASSIST_"+whatData+"_data";
+					}
 				}
+
 	
 				String fileDate = new SimpleDateFormat("yyyy-MM-dd hh-mm-ss").format(new Date());
 				fileName = fileLocation + fileName + "_" + fileDate + ".csv";
 				CSVWriter outputFile = new CSVWriter(new FileWriter(fileName));
 				List<String[]> objectArray = new ArrayList<String[]>();
 				objectArray.add(new String[] { "Business Name", "Business Address", "Business Address 1",
-						"Business City", "Business Zip", "Business Country", "Billing Name", "Billing Address",
+						"Business City", "Business Zip", "Business County", "Business Country", "Billing Name", "Billing Address",
 						"Billing Address 1", "Billing City", "Billing Zip", "Billing Country", "Business Hours Contact",
 						"Business Hours Contact Phone", "Business Hours Contact Email", "After Hours Contact",
 						"After Hours Contact Phone", "After Hours Contact Email", "Services", "Services Other" });
-	
-				for (Profile profile : profiles) {
-					objectArray.add(new String[] { profile.name, profile.address, profile.address1, profile.city,
-							profile.zip, profile.country, profile.billname, profile.billaddress, profile.billaddress1,
-							profile.billcity, profile.billzip, profile.billcountry,
-							profile.primaryNameFirst + " " + profile.primaryNameLast, profile.primaryPhone,
-							profile.primaryEmail, profile.secondaryNameFirst + " " + profile.secondaryNameLast,
-							profile.secondaryPhone, profile.secondaryEmail, profile.services, profile.servicesOther });
+				if (profiles != null){
+					for (Profile profile : profiles) {
+						objectArray.add(new String[] { profile.name, profile.address, profile.address1, profile.city,
+						profile.zip, profile.county, profile.country, profile.billname, profile.billaddress, profile.billaddress1,
+						profile.billcity, profile.billzip, profile.billcountry,
+						profile.primaryNameFirst + " " + profile.primaryNameLast, profile.primaryPhone,
+						profile.primaryEmail, profile.secondaryNameFirst + " " + profile.secondaryNameLast,
+						profile.secondaryPhone, profile.secondaryEmail, profile.services, profile.servicesOther });
+					}
 				}
-	
 				outputFile.writeAll(objectArray);
 				outputFile.close();
 			} catch (Exception ex) {
