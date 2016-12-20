@@ -1,4 +1,4 @@
-@(profilesList: java.util.List[Profile], servicesList: java.util.List[Service])
+@(profilesList: java.util.List[Profile], servicesList: java.util.List[Service], serviceOrCounty: String)
 
 @main(null) {
 
@@ -16,9 +16,10 @@
 			});
 		});
 	</script>
+	
 	<section id="displayResults" style="padding: 30px;">
 		<div class="table-responsive">
-		<h5>All Business Profiles:</h5>
+		<h5>Business Profiles: Showing: <span style="font-weight:bold">@serviceOrCounty</span></h5>
 		<div class="element-select">
 			<div class="selectDropdownField">
 				<div class="large">
@@ -43,6 +44,7 @@
 						<select class="selectCounty" name="selectCounty" id="selectCounty">
 							<option selected="selected" value="" disabled="disabled">--- Filter By County ---</option>
 							<option value="All">All</option>
+							<option value="Statewide">Statewide</option>
 							<option value="Adams">Adams</option>
 							<option value="Alamosa">Alamosa</option>
 							<option value="Arapahoe">Arapahoe</option>
