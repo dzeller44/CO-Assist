@@ -103,10 +103,10 @@ Seq[Any](_display_(/*2.2*/main(null)/*2.12*/ {_display_(Seq[Any](format.raw/*2.1
 object openuser extends openuser_Scope0.openuser
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:33 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/openuser.scala.html
-                  HASH: 30843cddbf203fc4242e5bba96fb603ebabef087
-                  MATRIX: 839->2|857->12|896->14|924->16|2471->1536|2510->1554|2579->1596|2618->1614|2756->1722
+                  DATE: Wed Dec 21 10:41:45 MST 2016
+                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/admin/openuser.scala.html
+                  HASH: 3d5330f9dba50df2c0d017b3a74bb617af5381c7
+                  MATRIX: 839->3|857->13|896->15|926->19|2515->1581|2554->1599|2624->1642|2663->1660|2809->1776
                   LINES: 32->2|32->2|32->2|34->4|76->46|76->46|77->47|77->47|85->55
                   -- GENERATED --
               */

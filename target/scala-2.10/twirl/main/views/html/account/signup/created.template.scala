@@ -69,10 +69,10 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object created extends created_Scope0.created
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:32 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/created.scala.html
-                  HASH: 16fa82cf11cd6eccb3375f3971c1ea55c0b829d4
-                  MATRIX: 846->1|859->7|898->9|927->12|1356->414|1407->444
+                  DATE: Wed Dec 21 10:41:44 MST 2016
+                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/account/signup/created.scala.html
+                  HASH: 04608d89ca6a6a1943815633a72003a654c8222b
+                  MATRIX: 846->1|859->7|898->9|929->14|1366->424|1417->454
                   LINES: 32->1|32->1|32->1|34->3|42->11|42->11
                   -- GENERATED --
               */

@@ -55,9 +55,9 @@ Seq[Any](format.raw/*1.41*/("""
 				<tbody>
 					"""),_display_(/*25.7*/for(profile <- profilesList) yield /*25.35*/ {_display_(Seq[Any](format.raw/*25.37*/("""
 					"""),format.raw/*26.6*/("""<tr>
-						<td><a href="/editprofile/"""),_display_(/*27.34*/profile/*27.41*/.name),format.raw/*27.46*/("""">"""),_display_(/*27.49*/profile/*27.56*/.name),format.raw/*27.61*/("""</a></td>
-						<td><a href="/editprofile/"""),_display_(/*28.34*/profile/*28.41*/.name),format.raw/*28.46*/("""">"""),_display_(/*28.49*/profile/*28.56*/.primaryNameFirst),format.raw/*28.73*/(""" """),_display_(/*28.75*/profile/*28.82*/.primaryNameLast),format.raw/*28.98*/("""</a></td>
-						<td><a href="/editprofile/"""),_display_(/*29.34*/profile/*29.41*/.name),format.raw/*29.46*/("""">"""),_display_(/*29.49*/profile/*29.56*/.services),format.raw/*29.65*/("""</a></td>
+						<td><a href="/openprofile/"""),_display_(/*27.34*/profile/*27.41*/.profilekey),format.raw/*27.52*/("""">"""),_display_(/*27.55*/profile/*27.62*/.name),format.raw/*27.67*/("""</a></td>
+						<td><a href="/openprofile/"""),_display_(/*28.34*/profile/*28.41*/.profilekey),format.raw/*28.52*/("""">"""),_display_(/*28.55*/profile/*28.62*/.primaryNameFirst),format.raw/*28.79*/(""" """),_display_(/*28.81*/profile/*28.88*/.primaryNameLast),format.raw/*28.104*/("""</a></td>
+						<td><a href="/openprofile/"""),_display_(/*29.34*/profile/*29.41*/.profilekey),format.raw/*29.52*/("""">"""),_display_(/*29.55*/profile/*29.62*/.services),format.raw/*29.71*/("""</a></td>
 					</tr>
 					""")))}),format.raw/*31.7*/(""" 
 				"""),format.raw/*32.5*/("""</tbody>
@@ -85,10 +85,10 @@ Seq[Any](format.raw/*1.41*/("""
 object displayprofiles extends displayprofiles_Scope0.displayprofiles
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:33 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/profile/displayprofiles.scala.html
-                  HASH: cb1d8a4dcc0e56e9c5983451bf1aa36e8bc4d00e
-                  MATRIX: 790->1|924->40|954->45|972->55|1011->57|1042->62|1082->76|1096->82|1156->122|1233->173|1247->179|1312->224|1388->274|1402->280|1453->311|1584->415|1612->416|1644->421|1704->454|1732->455|2136->833|2180->861|2220->863|2254->870|2320->909|2336->916|2362->921|2392->924|2408->931|2434->936|2505->980|2521->987|2547->992|2577->995|2593->1002|2631->1019|2660->1021|2676->1028|2713->1044|2784->1088|2800->1095|2826->1100|2856->1103|2872->1110|2902->1119|2961->1148|2995->1155
+                  DATE: Wed Dec 21 10:41:45 MST 2016
+                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/profile/displayprofiles.scala.html
+                  HASH: 984ae2382e65ad53d1424848dde304609d005788
+                  MATRIX: 790->1|924->40|954->45|972->55|1011->57|1042->62|1082->76|1096->82|1156->122|1233->173|1247->179|1312->224|1388->274|1402->280|1453->311|1584->415|1612->416|1644->421|1704->454|1732->455|2136->833|2180->861|2220->863|2254->870|2320->909|2336->916|2368->927|2398->930|2414->937|2440->942|2511->986|2527->993|2559->1004|2589->1007|2605->1014|2643->1031|2672->1033|2688->1040|2726->1056|2797->1100|2813->1107|2845->1118|2875->1121|2891->1128|2921->1137|2980->1166|3014->1173
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|40->9|40->9|41->10|42->11|42->11|56->25|56->25|56->25|57->26|58->27|58->27|58->27|58->27|58->27|58->27|59->28|59->28|59->28|59->28|59->28|59->28|59->28|59->28|59->28|60->29|60->29|60->29|60->29|60->29|60->29|62->31|63->32
                   -- GENERATED --
               */
