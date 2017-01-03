@@ -254,3 +254,4 @@ run
 clean
 compile
 dist
+cd..
