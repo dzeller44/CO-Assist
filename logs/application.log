@@ -1,0 +1,64 @@
+2017-01-03 15:08:45,920 [INFO] from play.core.server.NettyServer in pool-4-thread-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2017-01-03 15:08:50,210 [WARN] from application in ForkJoinPool-1-worker-1 - application.conf @ file:/C:/WebDev/workspace/COAssist/target/scala-2.10/classes/application.conf: 34: user is deprecated, use username instead
+2017-01-03 15:08:50,223 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-01-03 15:08:50,940 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://localhost/app?characterEncoding=UTF-8
+2017-01-03 15:08:52,149 [ERROR] from application in ForkJoinPool-1-worker-1 - 
+java.lang.RuntimeException: There is no HTTP Context available from here.
+	at play.mvc.Http$Context.current(Http.java:57) ~[play_2.10-2.4.6.jar:2.4.6]
+	at models.AuditLog.setLog(AuditLog.java:231) ~[classes/:na]
+	at utils.ScheduleEmail.scheduleReminder(ScheduleEmail.java:72) ~[classes/:na]
+	at Global.onStart(Global.java:12) [classes/:na]
+	at play.core.j.JavaGlobalSettingsAdapter.onStart(JavaGlobalSettingsAdapter.scala:22) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.GlobalPlugin.onStart(GlobalSettings.scala:271) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:92) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:92) [play_2.10-2.4.6.jar:2.4.6]
+	at scala.collection.Iterator$class.foreach(Iterator.scala:727) [scala-library.jar:na]
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1157) [scala-library.jar:na]
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72) [scala-library.jar:na]
+	at play.api.Plugins.foreach(Plugins.scala:57) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:92) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:87) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:87) [play_2.10-2.4.6.jar:2.4.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.10-2.4.6.jar:2.4.6]
+	at play.api.Play$.start(Play.scala:87) [play_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:156) [play-server_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:121) [play-server_2.10-2.4.6.jar:2.4.6]
+	at scala.Option.map(Option.scala:145) [scala-library.jar:na]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:121) [play-server_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:119) [play-server_2.10-2.4.6.jar:2.4.6]
+	at scala.util.Success.flatMap(Try.scala:200) [scala-library.jar:na]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:119) [play-server_2.10-2.4.6.jar:2.4.6]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:111) [play-server_2.10-2.4.6.jar:2.4.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library.jar:na]
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402) [na:1.8.0_101]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [na:1.8.0_101]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [na:1.8.0_101]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [na:1.8.0_101]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) [na:1.8.0_101]
+2017-01-03 15:08:52,165 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-01-03 15:08:53,439 [ERROR] from akka.dispatch.TaskInvocation in application-akka.actor.default-dispatcher-5 - javax.mail.internet.AddressException: Illegal address in string ``''
+org.apache.commons.mail.EmailException: javax.mail.internet.AddressException: Illegal address in string ``''
+	at org.apache.commons.mail.Email.createInternetAddress(Email.java:1909) ~[commons-email-1.3.3.jar:1.3.3]
+	at org.apache.commons.mail.Email.setFrom(Email.java:749) ~[commons-email-1.3.3.jar:1.3.3]
+	at org.apache.commons.mail.Email.setFrom(Email.java:732) ~[commons-email-1.3.3.jar:1.3.3]
+	at play.api.libs.mailer.SMTPMailer$$anonfun$createEmail$3.apply(MailerPlugin.scala:132) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
+	at play.api.libs.mailer.SMTPMailer$$anonfun$createEmail$3.apply(MailerPlugin.scala:132) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
+	at play.api.libs.mailer.SMTPMailer.play$api$libs$mailer$SMTPMailer$$setAddress(MailerPlugin.scala:226) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
+	at play.api.libs.mailer.SMTPMailer.createEmail(MailerPlugin.scala:132) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
+	at play.api.libs.mailer.SMTPMailer.send(MailerPlugin.scala:127) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
+	at play.api.libs.mailer.CommonsMailer.send(MailerPlugin.scala:109) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
+	at play.api.libs.mailer.MailerClient$class.send(MailerPlugin.scala:44) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
+	at play.api.libs.mailer.CommonsMailer.send(MailerPlugin.scala:83) ~[play-mailer_2.10-3.0.1.jar:3.0.1]
+	at models.utils.Mail$EnvelopJob.run(Mail.java:104) ~[classes/:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) ~[akka-actor_2.10-2.3.13.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.10-2.3.13.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library.jar:na]
+Caused by: javax.mail.internet.AddressException: Illegal address
+	at javax.mail.internet.InternetAddress.<init>(InternetAddress.java:114) ~[mail-1.4.5.jar:1.4.5]
+	at org.apache.commons.mail.Email.createInternetAddress(Email.java:1884) ~[commons-email-1.3.3.jar:1.3.3]
+	... 17 common frames omitted
+2017-01-03 15:18:56,063 [INFO] from application in pool-4-thread-4 - Shutting down connection pool.

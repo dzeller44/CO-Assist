@@ -63,8 +63,8 @@ Seq[Any](format.raw/*1.14*/("""
 object logged extends logged_Scope0.logged
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/logged.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/logged.scala.html
                   HASH: 5702257670939f834d456c32f7ede974c64fca11
                   MATRIX: 745->1|852->13|882->18|906->34|945->36|977->42|1176->214|1189->218|1219->227|1248->228|1371->325|1390->336|1448->374|1507->406|1548->426|1659->510|1674->516|1716->537|1778->572|1818->590|1905->647
                   LINES: 27->1|32->1|34->3|34->3|34->3|35->4|37->6|37->6|37->6|37->6|39->8|39->8|39->8|39->8|39->8|41->10|41->10|41->10|41->10|41->10|45->14

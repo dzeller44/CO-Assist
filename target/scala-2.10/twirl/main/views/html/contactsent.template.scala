@@ -68,8 +68,8 @@ Seq[Any](format.raw/*1.4*/("""
 object contactsent extends contactsent_Scope0.contactsent
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/contactsent.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/contactsent.scala.html
                   HASH: 4d97445639faa5aa76467de766113043ec21d414
                   MATRIX: 750->1|846->3|879->11|892->17|931->19|962->24
                   LINES: 27->1|32->1|35->4|35->4|35->4|37->6

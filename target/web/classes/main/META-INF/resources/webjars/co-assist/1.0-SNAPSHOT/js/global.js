@@ -70,3 +70,17 @@ function getByCounty() {
 	console.log("county = " + fieldValue);
 	window.location.href = "/searchbycounty?county=" + fieldValue;	
 }
+
+function addComments() {
+	console.log("Add Comment");
+	var e;
+	var fieldValue1;
+	var fieldValue2;
+	e = document.getElementById("intakekey");
+	fieldValue1 = e.value;
+	console.log("intake key = " + fieldValue1);
+	e = document.getElementById("comments");
+	fieldValue2 = e.value;
+	console.log("comments = " + fieldValue2);
+	window.location.href = "/addcomments?intakekey=" + fieldValue1 + "&comment=" + fieldValue2;
+}

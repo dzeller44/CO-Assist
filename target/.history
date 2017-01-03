@@ -255,3 +255,14 @@ clean
 compile
 dist
 cd..
+clean
+compile
+clan
+clean
+compile
+run
+clean
+compile
+run
+compile
+run

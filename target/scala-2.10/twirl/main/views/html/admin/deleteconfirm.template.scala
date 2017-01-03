@@ -82,8 +82,8 @@ Seq[Any](format.raw/*1.21*/("""
 object deleteconfirm extends deleteconfirm_Scope0.deleteconfirm
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/admin/deleteconfirm.scala.html
+                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/deleteconfirm.scala.html
                   HASH: 8bc5aa9b13cf94bdf241428747df24605b0dfe09
                   MATRIX: 767->1|881->20|911->25|929->35|968->37|998->41|1629->645|1659->654|1688->655|1879->819|1909->828|1938->829|2181->1045|2220->1063|2366->1179
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|48->17|48->17|48->17|52->21|52->21|52->21|56->25|56->25|64->33

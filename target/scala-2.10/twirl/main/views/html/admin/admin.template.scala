@@ -99,8 +99,8 @@ Seq[Any](format.raw/*1.38*/("""
 object admin extends admin_Scope0.admin
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/admin/admin.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/admin.scala.html
                   HASH: 4b5a8d1ad1aa501725f84f88deb749cf9bc83cb0
                   MATRIX: 768->1|899->37|929->42|947->52|986->54|1018->60|1388->403|1403->409|1462->447|1713->671|1728->677|1786->714|2021->922|2036->928|2099->970
                   LINES: 27->1|32->1|34->3|34->3|34->3|37->6|51->20|51->20|51->20|58->27|58->27|58->27|65->34|65->34|65->34

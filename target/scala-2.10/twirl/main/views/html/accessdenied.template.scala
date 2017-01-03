@@ -72,8 +72,8 @@ Seq[Any](format.raw/*1.20*/("""
 object accessdenied extends accessdenied_Scope0.accessdenied
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/accessdenied.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/accessdenied.scala.html
                   HASH: 79b579ff0cb87e4401e1ac2176685de9932cc2de
                   MATRIX: 759->1|872->19|902->24|920->34|959->36|989->40|1574->598|1603->606
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|47->16|47->16

@@ -64,8 +64,8 @@ Seq[Any](format.raw/*1.14*/("""
 object password extends password_Scope0.password
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/account/settings/password.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/account/settings/password.scala.html
                   HASH: cb665f231920c61965180e69c2e5e48688047280
                   MATRIX: 766->1|888->13|918->35|946->38|958->43|1000->77|1039->79|1073->88|1130->125|1164->134|1192->142|1227->151|1300->215|1340->217|1377->227|1497->320|1535->337|1590->362
                   LINES: 27->1|32->1|34->4|35->5|35->5|35->5|35->5|37->7|37->7|39->9|39->9|41->11|41->11|41->11|42->12|43->13|43->13|45->15

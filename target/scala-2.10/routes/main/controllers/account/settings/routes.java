@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/WebDev/workspace2/CO-Assist/conf/routes
-// @DATE:Wed Dec 21 10:41:44 MST 2016
+// @SOURCE:C:/WebDev/workspace/COAssist/conf/routes
+// @DATE:Tue Jan 03 14:50:29 MST 2017
 
 package controllers.account.settings;
 

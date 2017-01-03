@@ -106,8 +106,8 @@ Seq[Any](format.raw/*1.38*/("""
 object usermaint extends usermaint_Scope0.usermaint
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:45 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/admin/usermaint.scala.html
+                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/usermaint.scala.html
                   HASH: 243e4b22b8f7e52e5c0afb4fb4cf51a2bb2f3dd6
                   MATRIX: 776->1|907->37|937->42|955->52|994->54|1026->60|1428->435|1443->441|1501->478|1728->678|1743->684|1801->721|2039->932|2054->938|2114->977|2353->1189|2368->1195|2431->1237
                   LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|59->28|59->28|59->28|66->35|66->35|66->35|73->42|73->42|73->42

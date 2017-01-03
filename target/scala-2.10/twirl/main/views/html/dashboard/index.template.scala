@@ -72,8 +72,8 @@ Seq[Any](format.raw/*1.14*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:45 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/dashboard/index.scala.html
+                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/dashboard/index.scala.html
                   HASH: 358efccc3012a948f9c28e4a48886915727fcc2e
                   MATRIX: 753->1|860->13|890->18|908->28|947->30|977->34
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5

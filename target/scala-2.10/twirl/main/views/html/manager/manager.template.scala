@@ -85,8 +85,8 @@ Seq[Any](format.raw/*1.38*/("""
 object manager extends manager_Scope0.manager
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:45 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/manager/manager.scala.html
+                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/manager/manager.scala.html
                   HASH: 9082cf62865bc2b2e3a8e510670387693af02c0b
                   MATRIX: 774->1|905->37|935->42|953->52|992->54|1022->58|1508->517|1523->523|1586->565
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|53->22|53->22|53->22

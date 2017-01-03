@@ -116,8 +116,8 @@ Seq[Any](format.raw/*1.38*/("""
 object contact extends contact_Scope0.contact
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/contact.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/contact.scala.html
                   HASH: b509ccc3920abe00e4eabab3fdd719d7c05950ac
                   MATRIX: 768->1|899->37|932->45|945->51|984->53|1014->57|2734->1750|2774->1768
                   LINES: 27->1|32->1|35->4|35->4|35->4|37->6|72->41|72->41

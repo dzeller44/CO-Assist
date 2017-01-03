@@ -59,8 +59,8 @@ Seq[Any](format.raw/*1.34*/("""
 object twitterBootstrapInput extends twitterBootstrapInput_Scope0.twitterBootstrapInput
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/twitterBootstrapInput.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/twitterBootstrapInput.scala.html
                   HASH: 3c7e121dfad20f295dc0690b42491d0ea61572d3
                   MATRIX: 791->1|918->33|948->100|976->102|1026->126|1056->148|1095->150|1131->156|1178->177|1194->185|1217->188|1246->191|1262->199|1288->205|1328->220|1344->228|1370->234|1402->240|1452->264|1468->272|1509->293|1546->304|1577->326|1617->328|1654->338|1705->362|1722->370|1765->392|1806->403|1835->405
                   LINES: 27->1|32->1|34->5|35->6|35->6|35->6|35->6|35->6|36->7|36->7|36->7|36->7|36->7|36->7|37->8|37->8|37->8|38->9|38->9|38->9|38->9|39->10|39->10|39->10|40->11|40->11|40->11|40->11|41->12|42->13

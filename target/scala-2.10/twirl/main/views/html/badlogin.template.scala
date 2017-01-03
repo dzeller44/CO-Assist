@@ -73,8 +73,8 @@ Seq[Any](format.raw/*1.19*/(""" """),_display_(/*1.21*/main()/*1.27*/ {_display_
 object badlogin extends badlogin_Scope0.badlogin
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 21 10:41:44 MST 2016
-                  SOURCE: C:/WebDev/workspace2/CO-Assist/app/views/badlogin.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/badlogin.scala.html
                   HASH: 2ed6b17440272f82933ccb77fa0c50eb5a0f7fe9
                   MATRIX: 751->1|863->18|891->20|905->26|944->28|974->32|1433->464|1461->471|1565->548|1580->554|1619->572|1787->710
                   LINES: 27->1|32->1|32->1|32->1|32->1|34->3|43->12|43->12|46->15|46->15|46->15|55->24
