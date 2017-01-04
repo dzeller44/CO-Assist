@@ -32,6 +32,7 @@ GET    /getprofiles                controllers.Application.getProfilesByUser()
 GET    /openprofile/:name          controllers.Application.openProfile(name: String)
 POST   /openprofile/:name          controllers.Application.updateProfile(name: String)
 
+#not used
 GET    /useraccount                controllers.Application.openUserAccount(email: String)
 POST   /useraccount                controllers.Application.updateUserAccount()
 

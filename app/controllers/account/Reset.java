@@ -19,6 +19,7 @@ import views.html.account.reset.reset;
 import views.html.account.reset.runAsk;
 import views.html.account.reset.success;
 import java.net.MalformedURLException;
+import controllers.Application;
 
 import static play.data.Form.form;
 
@@ -54,7 +55,8 @@ public class Reset extends Controller {
 			else {
 				// Need to make sure we have:
 				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1 Number; 1 Special Character
-				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$!%^&+=])(?=\\S+$).{8,}";
+				//String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$!%^&+=*])(?=\\S+$).{8,}";
+				String passwordPattern = Application.PASSWORD;
 				if(!password.matches(passwordPattern)) {
 					return Messages.get("password.message");
 				}

@@ -1,4 +1,4 @@
-@(loginForm: Form[Application.Login], userList: java.util.List[User])
+@(userList: java.util.List[User])
 
 @main(null) {
 
@@ -27,7 +27,7 @@
 				</thead>
 				<tbody>
 					@for(user <- userList
-					if user.approved == "N"){
+					if user.approved == "N" && user.validated == 0){
 					<tr>
 						<td><a href="/finduserurl?email=@user.getEmail()">@user.fullname</a></td>
 						<td><a href="/finduserurl?email=@user.getEmail()">@user.getEmail()</a></td>
