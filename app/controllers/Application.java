@@ -74,6 +74,8 @@ import views.html.contactsent;
  * Edited by dzeller, cwyatt
  */
 public class Application extends Controller {
+	
+	public static String PASSWORD = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$!%^&+=*-_<>?])(?=\\S+$).{8,}";
 
 	public static Result GO_ADMIN = redirect(routes.Application.adminHome());
 
@@ -136,7 +138,7 @@ public class Application extends Controller {
 				// Need to make sure we have:
 				// 8 characters; 1 Uppercase character; 1 Lowercase character; 1
 				// Number; 1 Special Character
-				String passwordPattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$!%^&+=])(?=\\S+$).{8,}";
+				String passwordPattern = PASSWORD;
 				if (!inputPassword.matches(passwordPattern)) {
 					return Messages.get("password.message");
 				}
@@ -298,34 +300,28 @@ public class Application extends Controller {
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {
 			return ACCESS_DENIED;
 		} else {
-			String email;
-			String name;
-			String approved;
-			String role;
-			User user;
 	
 			Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
-	
-			// Get values from the form...
-			email = findUserForm.get().email;
-			name = findUserForm.get().fullname;
-			approved = findUserForm.get().approved;
-			role = findUserForm.get().role;
-	
-			Logger.debug("Update User");
-	
+			
 			if (findUserForm.hasErrors()) {
 				Logger.debug("Update User - errors");
 				return badRequest(showuser.render(findUserForm, "", "", ""));
 			}
+			
+			FindUser userform = findUserForm.get();
 	
-			// Find user and save changes...
-			Logger.debug("Update User - good request");
+			String email = userform.email;
+			String name = userform.fullname;
+			String approved = userform.approved;
+			String role = userform.role;
+			
+			//System.out.println("Role from form: "+role);
 	
-			// I know we have the user, but let's make sure we get the correct
-			// user...
-			user = User.findByEmail(email);
+			// Find the user
+			User user = User.findByEmail(email);
+			
 			user.fullname = name;
+			
 			switch (role) {
 			case "user":
 				user.role = RoleType.USER;
@@ -340,11 +336,16 @@ public class Application extends Controller {
 				user.role = RoleType.UNDEFINED;
 				break;
 			}
-			if (approved != null) {
+			
+			//System.out.println("New role for user: "+user.role);
+			
+			if (approved != null && user.role == RoleType.MANAGER) {  //only do this for managers
 				if (approved.equals("Y")) {
 					user.approved = "Y";
 					try {
+						if(user.validated == false){   //only want to only send this if user isn't validated
 						sendMailManagerConfirmation(user);
+						}     
 					} catch (Exception e) {
 						Logger.error("Can't send confirm email to approved emergency manager", e);
 						flash("error", Messages.get("error.technical"));
@@ -352,7 +353,9 @@ public class Application extends Controller {
 				} else {
 					user.approved = "N";
 					try {
+						if(user.validated == false){
 						sendMailEMDenied(user);
+						}
 					} catch (Exception e) {
 						Logger.error("Can't send deny email to denied emergency manager", e);
 						flash("error", Messages.get("error.technical"));
@@ -370,7 +373,7 @@ public class Application extends Controller {
 	
 	}
 
-
+	//not used
 	public Result updateUserAccount() {
 		String email;
 		String name;
@@ -470,10 +473,12 @@ public class Application extends Controller {
 		}
 	}
 
+	//not used
 	public Result displayUser(String actionType) {
 		return ok(getuser.render(form(FindUser.class)));
 	}
 
+	//not used
 	public Result openUser() {
 		// Check Role...
 		if (hasCorrectAccess(RoleType.ADMIN) != true) {
@@ -483,6 +488,7 @@ public class Application extends Controller {
 		}
 	}
 
+	//not used
 	public Result openUserAccount(String email) {
 		Form<FindUser> findUserForm = form(FindUser.class).bindFromRequest();
 		User user = User.findByEmail(email);
