@@ -6,7 +6,7 @@ import play.api.libs.mailer.MailerClient;
 import play.libs.mailer.Email;
 import play.mvc.Controller;
 
-public class GlobalUtilities extends Controller {
+public class GlobalUtilities {
 
 	@Inject
 	static MailerClient mailer;

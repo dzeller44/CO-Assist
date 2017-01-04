@@ -69,7 +69,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object profilecreated extends profilecreated_Scope0.profilecreated
               /*
                   -- GENERATED --
-                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  DATE: Wed Jan 04 08:49:49 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/profile/profilecreated.scala.html
                   HASH: e679a25afdad37c00f08d17f60c2a326b0984c41
                   MATRIX: 853->1|866->7|905->9|936->14|1374->425|1419->449
