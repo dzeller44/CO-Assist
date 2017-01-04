@@ -262,7 +262,7 @@ public class Application extends Controller {
 	public Result adminSearch() {
 		// NEED TO CORRECT THIS -- NEED NEW ROUTE/VIEW
 		List<User> users = User.find.all();
-		return ok(searchusers.render(form(Login.class), users));
+		return ok(searchusers.render(users));
 	}
 
 	
@@ -291,7 +291,7 @@ public class Application extends Controller {
 			return ACCESS_DENIED;
 		} else {
 			List<User> users = User.find.all();
-			return ok(searchusers.render(form(Login.class), users));
+			return ok(searchusers.render(users));
 		}
 	}
 
@@ -320,6 +320,8 @@ public class Application extends Controller {
 			// Find the user
 			User user = User.findByEmail(email);
 			
+			System.out.println(user.role + user.fullname);
+			
 			user.fullname = name;
 			
 			switch (role) {
@@ -337,7 +339,7 @@ public class Application extends Controller {
 				break;
 			}
 			
-			//System.out.println("New role for user: "+user.role);
+			System.out.println("New role for user: "+user.role + "new name :" + user.fullname);
 			
 			if (approved != null && user.role == RoleType.MANAGER) {  //only do this for managers
 				if (approved.equals("Y")) {
@@ -613,7 +615,7 @@ public class Application extends Controller {
 			String name = user.fullname;
 			// String role = user.role;
 			RoleType role = user.role;
-			String roleToDisplay = role.toString();
+			String roleToDisplay = role.getRoleTextName(role);
 			return ok(showuser.render(findUserForm, email, name, roleToDisplay));
 	
 		}
