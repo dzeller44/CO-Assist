@@ -27,7 +27,7 @@
 				</thead>
 				<tbody>
 					@for(user <- userList
-					if user.approved == "N" && user.validated == 0){
+					if user.approved == "N"){
 					<tr>
 						<td><a href="/finduserurl?email=@user.getEmail()">@user.fullname</a></td>
 						<td><a href="/finduserurl?email=@user.getEmail()">@user.getEmail()</a></td>
