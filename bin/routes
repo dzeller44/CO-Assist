@@ -3,6 +3,9 @@
 # ~~~~
 
 # Home page
+
+GET    /testemail                  controllers.Application.sendTestEmail()
+
 GET    /                           controllers.Application.index()
 GET    /dashboard                  controllers.Dashboard.index()
 
@@ -26,14 +29,19 @@ POST   /addprofile                 controllers.Application.saveProfile()
 
 GET    /getprofiles                controllers.Application.getProfilesByUser()
 
-GET    /editprofile/:name          controllers.Application.openProfile(name: String)
-POST   /editprofile/:name          controllers.Application.updateProfile(name: String)
+GET    /openprofile/:name          controllers.Application.openProfile(name: String)
+POST   /openprofile/:name          controllers.Application.updateProfile(name: String)
 
 GET    /useraccount                controllers.Application.openUserAccount(email: String)
 POST   /useraccount                controllers.Application.updateUserAccount()
 
 # Emergency Manager pages...
 GET    /em                         controllers.Application.managerHome()
+GET    /manager                    controllers.Application.managerHome()
+
+GET    /managersearchprofiles      controllers.Application.getAllProfilesManager()
+GET    /viewProfileManager/:name   controllers.Application.viewProfileManager(name: String)
+
 
 # Admin pages...
 GET    /admin                      controllers.Application.adminHome()
@@ -48,8 +56,8 @@ GET    /searchbyservice            controllers.Application.getProfilesByService(
 
 GET    /searchbycounty             controllers.Application.getProfilesByCounty(county: String)
 
-GET    /openprofile/:name          controllers.Application.openProfileAdmin(name: String)
-POST   /openprofile/:name          controllers.Application.updateProfileAdmin(name: String)
+GET    /editprofile/:name          controllers.Application.openProfile(name: String)
+POST   /editprofile/:name          controllers.Application.updateProfileAdmin(name: String)
 
 GET    /deleteprofile/:name        controllers.Application.deleteProfileConfirm(name: String)
 POST   /deleteprofile/:name        controllers.Application.deleteProfile(name: String)
@@ -105,4 +113,3 @@ GET    /email/:token               controllers.account.settings.Email.validateEm
 
 # Map static resources from the /public folder to the /assets URL path
 GET    /assets/*file               controllers.Assets.at(path="/public", file)
-

@@ -64,10 +64,10 @@ Seq[Any](format.raw/*1.14*/("""
 object password extends password_Scope0.password
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:32 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/settings/password.scala.html
-                  HASH: 438deb870b78cf02cdc18c096271d54c2ec9bb25
-                  MATRIX: 766->1|888->13|916->32|943->34|955->39|997->73|1036->75|1068->82|1125->119|1157->126|1185->134|1218->141|1291->205|1331->207|1367->216|1486->308|1524->325|1577->348
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/account/settings/password.scala.html
+                  HASH: cb665f231920c61965180e69c2e5e48688047280
+                  MATRIX: 766->1|888->13|918->35|946->38|958->43|1000->77|1039->79|1073->88|1130->125|1164->134|1192->142|1227->151|1300->215|1340->217|1377->227|1497->320|1535->337|1590->362
                   LINES: 27->1|32->1|34->4|35->5|35->5|35->5|35->5|37->7|37->7|39->9|39->9|41->11|41->11|41->11|42->12|43->13|43->13|45->15
                   -- GENERATED --
               */

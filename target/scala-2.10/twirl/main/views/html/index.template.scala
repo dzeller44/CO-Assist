@@ -100,10 +100,10 @@ Seq[Any](format.raw/*1.78*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:32 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/index.scala.html
-                  HASH: 877d88d5f737b3157b9cacbe37670457cd937731
-                  MATRIX: 789->1|960->77|988->80|1006->90|1045->92|1074->95|1464->458|1479->464|1536->500|1778->715|1793->721|1856->763|2108->988|2123->994|2177->1027
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/index.scala.html
+                  HASH: c402aa573faf1a777a89576215c1b866d0d456be
+                  MATRIX: 789->1|960->77|990->82|1008->92|1047->94|1079->100|1484->478|1499->484|1556->520|1805->742|1820->748|1883->790|2143->1023|2158->1029|2212->1062
                   LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|59->28|59->28|59->28|67->36|67->36|67->36
                   -- GENERATED --
               */

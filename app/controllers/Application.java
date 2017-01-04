@@ -33,6 +33,7 @@ import play.Logger;
 import play.data.Form;
 import play.data.validation.Constraints;
 import play.i18n.Messages;
+import play.libs.mailer.Email;
 import play.libs.mailer.MailerClient;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -1667,4 +1668,13 @@ public class Application extends Controller {
 	 End contact page
 	 ********************************************************************************/
 
+	public Result sendTestEmail() {
+		String subject = "Simple email";
+		String to = "dan.zeller@state.co.us";
+		Mail.Envelop envelop = new Mail.Envelop(subject, "Test Message", to);
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);		
+		return ok(contactsent.render());
+	}
+	
 }  //end application.java

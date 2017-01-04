@@ -46,18 +46,12 @@ Seq[Any](format.raw/*1.38*/("""
 			<div class="row">
 				<div class="col-sm-2 margbot30"></div>
 				<div class="col-sm-1 margbot30"></div>
+
 				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/searchprofiles">
+					<a class="services_item" href="/managersearchprofiles">
 						<p>
-							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*21.64*/(""""> <b>Export Data</b>
-						</p> <span>Export Records...</span>
-					</a>
-				</div>
-				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/searchprofiles">
-						<p>
-							<img src=""""),_display_(/*28.19*/routes/*28.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*28.67*/(""""> <b>Search Records</b>
-						</p> <span>Search Business Profiles...</span>
+							<img src=""""),_display_(/*22.19*/routes/*22.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*22.67*/(""""> <b>Search/Export Records</b>
+						</p> <span>Search and Export Business Profiles...</span>
 					</a>
 				</div>
 
@@ -91,11 +85,11 @@ Seq[Any](format.raw/*1.38*/("""
 object manager extends manager_Scope0.manager
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:33 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/manager/manager.scala.html
-                  HASH: 6a982e0d097e96d4dc680b8104b00d311a9545d9
-                  MATRIX: 774->1|905->37|933->40|951->50|990->52|1018->54|1479->488|1494->494|1554->533|1785->737|1800->743|1863->785
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|52->21|52->21|52->21|59->28|59->28|59->28
+                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/manager/manager.scala.html
+                  HASH: 9082cf62865bc2b2e3a8e510670387693af02c0b
+                  MATRIX: 774->1|905->37|935->42|953->52|992->54|1022->58|1508->517|1523->523|1586->565
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|53->22|53->22|53->22
                   -- GENERATED --
               */
           

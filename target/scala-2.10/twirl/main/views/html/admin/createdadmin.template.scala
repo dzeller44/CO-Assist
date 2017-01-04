@@ -69,10 +69,10 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object createdadmin extends createdadmin_Scope0.createdadmin
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:32 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/createdadmin.scala.html
-                  HASH: 83db86e1b29b8d9cf0ccf04b7654f287b7af3313
-                  MATRIX: 847->1|860->7|899->9|928->12|1357->414|1418->454
+                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/createdadmin.scala.html
+                  HASH: 31b22c1b20be2b2ac9e2ca64ab6415e9be46901c
+                  MATRIX: 847->1|860->7|899->9|930->14|1367->424|1428->464
                   LINES: 32->1|32->1|32->1|34->3|42->11|42->11
                   -- GENERATED --
               */

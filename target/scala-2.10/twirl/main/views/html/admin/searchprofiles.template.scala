@@ -21,15 +21,15 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class searchprofiles extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[java.util.List[Profile],java.util.List[Service],play.twirl.api.HtmlFormat.Appendable] {
+class searchprofiles extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template3[java.util.List[Profile],java.util.List[Service],String,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(profilesList: java.util.List[Profile], servicesList: java.util.List[Service]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(profilesList: java.util.List[Profile], servicesList: java.util.List[Service], serviceOrCounty: String):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.80*/("""
+Seq[Any](format.raw/*1.105*/("""
 
 """),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
 
@@ -49,7 +49,7 @@ Seq[Any](format.raw/*1.80*/("""
 	</script>
 	<section id="displayResults" style="padding: 30px;">
 		<div class="table-responsive">
-		<h5>All Business Profiles:</h5>
+		<h5>Business Profiles: Showing: <span style="font-weight:bold">"""),_display_(/*21.67*/serviceOrCounty),format.raw/*21.82*/("""</span></h5>
 		<div class="element-select">
 			<div class="selectDropdownField">
 				<div class="large">
@@ -74,6 +74,7 @@ Seq[Any](format.raw/*1.80*/("""
 						<select class="selectCounty" name="selectCounty" id="selectCounty">
 							<option selected="selected" value="" disabled="disabled">--- Filter By County ---</option>
 							<option value="All">All</option>
+							<option value="Statewide">Statewide</option>
 							<option value="Adams">Adams</option>
 							<option value="Alamosa">Alamosa</option>
 							<option value="Arapahoe">Arapahoe</option>
@@ -148,35 +149,40 @@ Seq[Any](format.raw/*1.80*/("""
 			<thead>
 				<tr>
 					<th>Business Name</th>
-					<th>Contact</th>
-					<th>Phone</th>
+					<th>Business Hours Contact</th>
+					<th>Business Hours Phone</th>
+					<th>After Hours Contact</th>
+					<th>After Hours Phone</th>
 					<th>Services</th>
 					<th>County</th>
 				</tr>
 			</thead>
 			<tbody>
-				"""),_display_(/*127.6*/for(profile <- profilesList) yield /*127.34*/ {_display_(Seq[Any](format.raw/*127.36*/("""
-				"""),format.raw/*128.5*/("""<tr>
-					<td><a href="/openprofile/"""),_display_(/*129.33*/profile/*129.40*/.profilekey),format.raw/*129.51*/("""">"""),_display_(/*129.54*/profile/*129.61*/.name),format.raw/*129.66*/("""</a></td>
- 					<td><a href="/openprofile/"""),_display_(/*130.34*/profile/*130.41*/.profilekey),format.raw/*130.52*/("""">"""),_display_(/*130.55*/profile/*130.62*/.primaryNameFirst),format.raw/*130.79*/(""" """),_display_(/*130.81*/profile/*130.88*/.primaryNameLast),format.raw/*130.104*/("""</a></td>
- 					<td><a href="/openprofile/"""),_display_(/*131.34*/profile/*131.41*/.profilekey),format.raw/*131.52*/("""">"""),_display_(/*131.55*/profile/*131.62*/.primaryPhone),format.raw/*131.75*/("""</a></td>
- 					<td><a href="/openprofile/"""),_display_(/*132.34*/profile/*132.41*/.profilekey),format.raw/*132.52*/("""">"""),_display_(/*132.55*/profile/*132.62*/.services),format.raw/*132.71*/("""</a></td>
- 					<td><a href="/openprofile/"""),_display_(/*133.34*/profile/*133.41*/.profilekey),format.raw/*133.52*/("""">"""),_display_(/*133.55*/profile/*133.62*/.county),format.raw/*133.69*/("""</a></td>
+				"""),_display_(/*130.6*/for(profile <- profilesList) yield /*130.34*/ {_display_(Seq[Any](format.raw/*130.36*/("""
+				"""),format.raw/*131.5*/("""<tr>
+					<td><a href="/editprofile/"""),_display_(/*132.33*/profile/*132.40*/.profilekey),format.raw/*132.51*/("""">"""),_display_(/*132.54*/profile/*132.61*/.name),format.raw/*132.66*/("""</a></td>
+ 					<td><a href="/editprofile/"""),_display_(/*133.34*/profile/*133.41*/.profilekey),format.raw/*133.52*/("""">"""),_display_(/*133.55*/profile/*133.62*/.primaryNameFirst),format.raw/*133.79*/(""" """),_display_(/*133.81*/profile/*133.88*/.primaryNameLast),format.raw/*133.104*/("""</a></td>
+ 					<td><a href="/editprofile/"""),_display_(/*134.34*/profile/*134.41*/.profilekey),format.raw/*134.52*/("""">"""),_display_(/*134.55*/profile/*134.62*/.primaryPhone),format.raw/*134.75*/("""</a></td>
+ 					<td><a href="/editprofile/"""),_display_(/*135.34*/profile/*135.41*/.profilekey),format.raw/*135.52*/("""">"""),_display_(/*135.55*/profile/*135.62*/.secondaryNameFirst),format.raw/*135.81*/(""" """),_display_(/*135.83*/profile/*135.90*/.secondaryNameLast),format.raw/*135.108*/("""</a></td>
+ 					<td><a href="/editprofile/"""),_display_(/*136.34*/profile/*136.41*/.profilekey),format.raw/*136.52*/("""">"""),_display_(/*136.55*/profile/*136.62*/.secondaryPhone),format.raw/*136.77*/("""</a></td>
+ 					<td><a href="/editprofile/"""),_display_(/*137.34*/profile/*137.41*/.profilekey),format.raw/*137.52*/("""">"""),_display_(/*137.55*/profile/*137.62*/.services),format.raw/*137.71*/("""</a></td>
+ 					<td><a href="/editprofile/"""),_display_(/*138.34*/profile/*138.41*/.profilekey),format.raw/*138.52*/("""">"""),_display_(/*138.55*/profile/*138.62*/.county),format.raw/*138.69*/("""</a></td>
 				</tr>
-				""")))}),format.raw/*135.6*/(""" 
-			"""),format.raw/*136.4*/("""</tbody>
+				""")))}),format.raw/*140.6*/(""" 
+			"""),format.raw/*141.4*/("""</tbody>
 		</table>
 		</div>
-		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export This View</a></div>	
+		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export All</a></div>	
+		<div><a href="/exportprofiles/"""),_display_(/*145.34*/serviceOrCounty),format.raw/*145.49*/("""" class="buttonCustomView" style="color: #FFFFFF;">Export Current View</a></div>
 	</section>
 """)))}))
       }
     }
   }
 
-  def render(profilesList:java.util.List[Profile],servicesList:java.util.List[Service]): play.twirl.api.HtmlFormat.Appendable = apply(profilesList,servicesList)
+  def render(profilesList:java.util.List[Profile],servicesList:java.util.List[Service],serviceOrCounty:String): play.twirl.api.HtmlFormat.Appendable = apply(profilesList,servicesList,serviceOrCounty)
 
-  def f:((java.util.List[Profile],java.util.List[Service]) => play.twirl.api.HtmlFormat.Appendable) = (profilesList,servicesList) => apply(profilesList,servicesList)
+  def f:((java.util.List[Profile],java.util.List[Service],String) => play.twirl.api.HtmlFormat.Appendable) = (profilesList,servicesList,serviceOrCounty) => apply(profilesList,servicesList,serviceOrCounty)
 
   def ref: this.type = this
 
@@ -189,11 +195,11 @@ Seq[Any](format.raw/*1.80*/("""
 object searchprofiles extends searchprofiles_Scope0.searchprofiles
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:33 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/searchprofiles.scala.html
-                  HASH: 882da2ecb130464a2558aa6c6fbfda4b4c535871
-                  MATRIX: 810->1|983->79|1013->84|1031->94|1070->96|1101->101|1141->115|1155->121|1215->161|1292->212|1306->218|1371->263|1447->313|1461->319|1512->350|1643->454|1671->455|1703->460|1804->533|1833->534|1866->540|1914->561|1942->562|2014->606|2043->607|2076->613|2122->632|2150->633|2183->639|2211->640|2715->1118|2759->1146|2799->1148|2836->1158|2879->1174|2895->1181|2921->1186|2951->1189|2967->1196|2993->1201|3042->1220|3077->1228|7094->5218|7139->5246|7180->5248|7214->5254|7280->5292|7297->5299|7330->5310|7361->5313|7378->5320|7405->5325|7477->5369|7494->5376|7527->5387|7558->5390|7575->5397|7614->5414|7644->5416|7661->5423|7700->5439|7772->5483|7789->5490|7822->5501|7853->5504|7870->5511|7905->5524|7977->5568|7994->5575|8027->5586|8058->5589|8075->5596|8106->5605|8178->5649|8195->5656|8228->5667|8259->5670|8276->5677|8305->5684|8363->5711|8397->5717
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|40->9|40->9|41->10|42->11|42->11|43->12|44->13|44->13|45->14|45->14|46->15|47->16|47->16|48->17|48->17|60->29|60->29|60->29|61->30|61->30|61->30|61->30|61->30|61->30|61->30|62->31|63->32|158->127|158->127|158->127|159->128|160->129|160->129|160->129|160->129|160->129|160->129|161->130|161->130|161->130|161->130|161->130|161->130|161->130|161->130|161->130|162->131|162->131|162->131|162->131|162->131|162->131|163->132|163->132|163->132|163->132|163->132|163->132|164->133|164->133|164->133|164->133|164->133|164->133|166->135|167->136
+                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/searchprofiles.scala.html
+                  HASH: d7ad19c99b896bc5d9039c7add81d69efe5183ce
+                  MATRIX: 817->1|1016->104|1046->109|1064->119|1103->121|1134->126|1174->140|1188->146|1248->186|1325->237|1339->243|1404->288|1480->338|1494->344|1545->375|1676->479|1704->480|1736->485|1837->558|1866->559|1899->565|1947->586|1975->587|2047->631|2076->632|2109->638|2155->657|2183->658|2216->664|2244->665|2442->836|2478->851|2856->1203|2900->1231|2940->1233|2977->1243|3020->1259|3036->1266|3062->1271|3092->1274|3108->1281|3134->1286|3183->1305|3218->1313|7386->5454|7431->5482|7472->5484|7506->5490|7572->5528|7589->5535|7622->5546|7653->5549|7670->5556|7697->5561|7769->5605|7786->5612|7819->5623|7850->5626|7867->5633|7906->5650|7936->5652|7953->5659|7992->5675|8064->5719|8081->5726|8114->5737|8145->5740|8162->5747|8197->5760|8269->5804|8286->5811|8319->5822|8350->5825|8367->5832|8408->5851|8438->5853|8455->5860|8496->5878|8568->5922|8585->5929|8618->5940|8649->5943|8666->5950|8703->5965|8775->6009|8792->6016|8825->6027|8856->6030|8873->6037|8904->6046|8976->6090|8993->6097|9026->6108|9057->6111|9074->6118|9103->6125|9161->6152|9195->6158|9397->6332|9434->6347
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|40->9|40->9|41->10|42->11|42->11|43->12|44->13|44->13|45->14|45->14|46->15|47->16|47->16|48->17|48->17|52->21|52->21|60->29|60->29|60->29|61->30|61->30|61->30|61->30|61->30|61->30|61->30|62->31|63->32|161->130|161->130|161->130|162->131|163->132|163->132|163->132|163->132|163->132|163->132|164->133|164->133|164->133|164->133|164->133|164->133|164->133|164->133|164->133|165->134|165->134|165->134|165->134|165->134|165->134|166->135|166->135|166->135|166->135|166->135|166->135|166->135|166->135|166->135|167->136|167->136|167->136|167->136|167->136|167->136|168->137|168->137|168->137|168->137|168->137|168->137|169->138|169->138|169->138|169->138|169->138|169->138|171->140|172->141|176->145|176->145
                   -- GENERATED --
               */
           

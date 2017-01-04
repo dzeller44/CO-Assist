@@ -40,20 +40,20 @@ Seq[Any](format.raw/*1.164*/("""
   	  	
   		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,500,700italic,900,900italic' rel='stylesheet' type='text/css'>
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-		<link rel="stylesheet" href=""""),_display_(/*13.33*/routes/*13.39*/.Assets.at("css/app.css")),format.raw/*13.64*/("""">
-		<link href=""""),_display_(/*14.16*/routes/*14.22*/.Assets.at("css/bootstrap/bootstrap.min.css")),format.raw/*14.67*/("""" rel="stylesheet" type="text/css" />
-		<link href=""""),_display_(/*15.16*/routes/*15.22*/.Assets.at("css/flexslider.css")),format.raw/*15.54*/("""" rel="stylesheet" type="text/css" />
-		<link href=""""),_display_(/*16.16*/routes/*16.22*/.Assets.at("css/prettyPhoto.css")),format.raw/*16.55*/("""" rel="stylesheet" type="text/css" />
-		<link href=""""),_display_(/*17.16*/routes/*17.22*/.Assets.at("css/animate.css")),format.raw/*17.51*/("""" rel="stylesheet" type="text/css" media="all" />
-		<link href=""""),_display_(/*18.16*/routes/*18.22*/.Assets.at("css/owl.carousel.css")),format.raw/*18.56*/("""" rel="stylesheet">
-		<link href=""""),_display_(/*19.16*/routes/*19.22*/.Assets.at("css/style.css")),format.raw/*19.49*/("""" rel="stylesheet" type="text/css" />
-		<link href=""""),_display_(/*20.16*/routes/*20.22*/.Assets.at("css/formoid/formoid-solid-dark.css")),format.raw/*20.70*/("""" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href=""""),_display_(/*15.33*/routes/*15.39*/.Assets.at("css/app.css")),format.raw/*15.64*/("""">
+		<link href=""""),_display_(/*16.16*/routes/*16.22*/.Assets.at("css/flexslider.css")),format.raw/*16.54*/("""" rel="stylesheet" type="text/css" />
+		<link href=""""),_display_(/*17.16*/routes/*17.22*/.Assets.at("css/prettyPhoto.css")),format.raw/*17.55*/("""" rel="stylesheet" type="text/css" />
+		<link href=""""),_display_(/*18.16*/routes/*18.22*/.Assets.at("css/animate.css")),format.raw/*18.51*/("""" rel="stylesheet" type="text/css" media="all" />
+		<link href=""""),_display_(/*19.16*/routes/*19.22*/.Assets.at("css/owl.carousel.css")),format.raw/*19.56*/("""" rel="stylesheet">
+		<link href=""""),_display_(/*20.16*/routes/*20.22*/.Assets.at("css/style.css")),format.raw/*20.49*/("""" rel="stylesheet" type="text/css" />
+		<link href=""""),_display_(/*21.16*/routes/*21.22*/.Assets.at("css/formoid/formoid-solid-dark.css")),format.raw/*21.70*/("""" rel="stylesheet" type="text/css" />
          
-	    <script data-main=""""),_display_(/*22.26*/routes/*22.32*/.Assets.at("js/main.js")),format.raw/*22.56*/("""" src=""""),_display_(/*22.64*/routes/*22.70*/.Assets.at("lib/requirejs/require.js")),format.raw/*22.108*/(""""></script>
-	    <script src=""""),_display_(/*23.20*/routes/*23.26*/.Assets.at("lib/angularjs/angular.js")),format.raw/*23.64*/("""" type="text/javascript"></script>
-	   	<script src=""""),_display_(/*24.20*/routes/*24.26*/.Assets.at("js/jquery/jquery.min.js")),format.raw/*24.63*/("""" type="text/javascript"></script>
-	   	<script src=""""),_display_(/*25.20*/routes/*25.26*/.Assets.at("js/bootstrap/bootstrap.js")),format.raw/*25.65*/("""" type="text/javascript"></script>
+	    <script data-main=""""),_display_(/*23.26*/routes/*23.32*/.Assets.at("js/main.js")),format.raw/*23.56*/("""" src=""""),_display_(/*23.64*/routes/*23.70*/.Assets.at("lib/requirejs/require.js")),format.raw/*23.108*/(""""></script>
+	    <script src=""""),_display_(/*24.20*/routes/*24.26*/.Assets.at("lib/angularjs/angular.js")),format.raw/*24.64*/("""" type="text/javascript"></script>
+	   	<script src=""""),_display_(/*25.20*/routes/*25.26*/.Assets.at("js/jquery/jquery.min.js")),format.raw/*25.63*/("""" type="text/javascript"></script>
 	    <script src=""""),_display_(/*26.20*/routes/*26.26*/.Assets.at("js/password.js")),format.raw/*26.54*/("""" type="text/javascript"></script>
 		<script src=""""),_display_(/*27.17*/routes/*27.23*/.Assets.at("js/jquery/jquery.prettyPhoto.js")),format.raw/*27.68*/("""" type="text/javascript"></script>
 		<script src=""""),_display_(/*28.17*/routes/*28.23*/.Assets.at("js/jquery/jquery.nicescroll.min.js")),format.raw/*28.71*/("""" type="text/javascript"></script>
@@ -259,11 +259,11 @@ Seq[Any](format.raw/*1.164*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:32 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/main.scala.html
-                  HASH: 9f478202cf82a110ccea275788a8cec87c107eaf
-                  MATRIX: 765->1|1023->163|1053->167|1264->352|1278->358|1327->387|1687->720|1702->726|1748->751|1794->770|1809->776|1875->821|1956->875|1971->881|2024->913|2105->967|2120->973|2174->1006|2255->1060|2270->1066|2320->1095|2413->1161|2428->1167|2483->1201|2546->1237|2561->1243|2609->1270|2690->1324|2705->1330|2774->1378|2876->1453|2891->1459|2936->1483|2971->1491|2986->1497|3046->1535|3105->1567|3120->1573|3179->1611|3261->1666|3276->1672|3334->1709|3416->1764|3431->1770|3491->1809|3573->1864|3588->1870|3637->1898|3716->1950|3731->1956|3797->2001|3876->2053|3891->2059|3960->2107|4039->2159|4054->2165|4108->2198|4187->2250|4202->2256|4271->2304|4350->2356|4365->2362|4418->2394|4497->2446|4512->2452|4560->2479|4639->2531|4654->2537|4722->2584|4778->2613|4793->2619|4842->2647|4921->2699|4936->2705|4983->2731|5123->2843|5152->2844|5188->2853|5264->2902|5292->2903|5381->2964|5410->2965|5446->2974|5505->3005|5534->3006|5571->3016|6040->3457|6069->3458|6098->3459|6330->3664|6359->3665|6427->3705|6456->3706|6495->3717|6592->3787|6621->3788|6657->3797|6685->3798|6722->3808|6750->3809|6873->3905|6888->3911|6940->3942|7321->4296|7336->4302|7397->4342|7854->4771|7906->4813|7947->4815|7990->4829|8077->4897|8091->4902|8131->4903|8176->4919|8335->5050|8369->5062|8436->5100|8471->5112|8526->5135|8564->5145|9867->6420|9896->6427
-                  LINES: 27->1|32->1|34->3|39->8|39->8|39->8|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|47->16|47->16|47->16|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|53->22|53->22|53->22|53->22|53->22|53->22|54->23|54->23|54->23|55->24|55->24|55->24|56->25|56->25|56->25|57->26|57->26|57->26|58->27|58->27|58->27|59->28|59->28|59->28|60->29|60->29|60->29|61->30|61->30|61->30|62->31|62->31|62->31|63->32|63->32|63->32|64->33|64->33|64->33|65->34|65->34|65->34|66->35|66->35|66->35|69->38|69->38|70->39|71->40|71->40|74->43|74->43|75->44|75->44|75->44|76->45|85->54|85->54|85->54|89->58|89->58|90->59|90->59|91->60|92->61|92->61|93->62|93->62|94->63|94->63|101->70|101->70|101->70|120->89|120->89|120->89|132->101|132->101|132->101|133->102|134->103|134->103|134->103|135->104|136->105|136->105|136->105|136->105|137->106|138->107|184->153|184->153
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/main.scala.html
+                  HASH: e10c0095a26bf9d54e8e88e52e2b1cef94cc3cea
+                  MATRIX: 765->1|1023->163|1053->167|1264->352|1278->358|1327->387|2102->1135|2117->1141|2163->1166|2209->1185|2224->1191|2277->1223|2358->1277|2373->1283|2427->1316|2508->1370|2523->1376|2573->1405|2666->1471|2681->1477|2736->1511|2799->1547|2814->1553|2862->1580|2943->1634|2958->1640|3027->1688|3129->1763|3144->1769|3189->1793|3224->1801|3239->1807|3299->1845|3358->1877|3373->1883|3432->1921|3514->1976|3529->1982|3587->2019|3669->2074|3684->2080|3733->2108|3812->2160|3827->2166|3893->2211|3972->2263|3987->2269|4056->2317|4135->2369|4150->2375|4204->2408|4283->2460|4298->2466|4367->2514|4446->2566|4461->2572|4514->2604|4593->2656|4608->2662|4656->2689|4735->2741|4750->2747|4818->2794|4874->2823|4889->2829|4938->2857|5017->2909|5032->2915|5079->2941|5219->3053|5248->3054|5284->3063|5360->3112|5388->3113|5477->3174|5506->3175|5542->3184|5601->3215|5630->3216|5667->3226|6136->3667|6165->3668|6194->3669|6426->3874|6455->3875|6523->3915|6552->3916|6591->3927|6688->3997|6717->3998|6753->4007|6781->4008|6818->4018|6846->4019|6969->4115|6984->4121|7036->4152|7417->4506|7432->4512|7493->4552|7950->4981|8002->5023|8043->5025|8086->5039|8173->5107|8187->5112|8227->5113|8272->5129|8431->5260|8465->5272|8532->5310|8567->5322|8622->5345|8660->5355|9963->6630|9992->6637
+                  LINES: 27->1|32->1|34->3|39->8|39->8|39->8|46->15|46->15|46->15|47->16|47->16|47->16|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|51->20|51->20|51->20|52->21|52->21|52->21|54->23|54->23|54->23|54->23|54->23|54->23|55->24|55->24|55->24|56->25|56->25|56->25|57->26|57->26|57->26|58->27|58->27|58->27|59->28|59->28|59->28|60->29|60->29|60->29|61->30|61->30|61->30|62->31|62->31|62->31|63->32|63->32|63->32|64->33|64->33|64->33|65->34|65->34|65->34|66->35|66->35|66->35|69->38|69->38|70->39|71->40|71->40|74->43|74->43|75->44|75->44|75->44|76->45|85->54|85->54|85->54|89->58|89->58|90->59|90->59|91->60|92->61|92->61|93->62|93->62|94->63|94->63|101->70|101->70|101->70|120->89|120->89|120->89|132->101|132->101|132->101|133->102|134->103|134->103|134->103|135->104|136->105|136->105|136->105|136->105|137->106|138->107|184->153|184->153
                   -- GENERATED --
               */
           

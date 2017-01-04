@@ -248,3 +248,21 @@ dist
 clean
 compile
 run 80
+clean
+compile
+run
+clean
+compile
+dist
+cd..
+clean
+compile
+clan
+clean
+compile
+run
+clean
+compile
+run
+compile
+run

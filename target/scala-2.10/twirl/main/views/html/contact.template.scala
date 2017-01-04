@@ -44,6 +44,14 @@ Seq[Any](format.raw/*1.38*/("""
 				<input class="large" type="text" name="name" required="required" placeholder="Enter your name..." /><span class="icon-place"></span>
 			</div>
 	</div>
+	
+	<div class="element-input">
+		<label class="title"><span class="required">*</span>Business Hours Phone Number:</label>
+			<div class="item-cont">
+					<input class="large" type="text" maxlength="24" name="phone" required="required" placeholder="Phone Number..." value="" /><span class="icon-place"></span>
+			</div>
+	</div>
+	
 	<div class="element-input">
 		<label class="title"><span class="required">*</span>Email:</label>
 		<div>Note: You will receive a copy of your message at this email. </div>
@@ -61,7 +69,7 @@ Seq[Any](format.raw/*1.38*/("""
 		  
 		  
 	<div class="submit">
-		<input type="submit" value="Submit" id="submit"/> <a href="/" class="buttonCancel">"""),_display_(/*33.87*/Messages("goback")),format.raw/*33.105*/("""</a>
+		<input type="submit" value="Submit" id="submit"/> <a href="/" class="buttonCancel">"""),_display_(/*41.87*/Messages("goback")),format.raw/*41.105*/("""</a>
 	</div>
 	
 	<!-- This is needed for bottom shadow to appear... -->
@@ -108,11 +116,11 @@ Seq[Any](format.raw/*1.38*/("""
 object contact extends contact_Scope0.contact
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:32 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/contact.scala.html
-                  HASH: 9ec6c8806cd44f5b92f8069d5c8c26bdbcc74dea
-                  MATRIX: 768->1|899->37|932->45|945->51|984->53|1014->57|2397->1413|2437->1431
-                  LINES: 27->1|32->1|35->4|35->4|35->4|37->6|64->33|64->33
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/contact.scala.html
+                  HASH: b509ccc3920abe00e4eabab3fdd719d7c05950ac
+                  MATRIX: 768->1|899->37|932->45|945->51|984->53|1014->57|2734->1750|2774->1768
+                  LINES: 27->1|32->1|35->4|35->4|35->4|37->6|72->41|72->41
                   -- GENERATED --
               */
           

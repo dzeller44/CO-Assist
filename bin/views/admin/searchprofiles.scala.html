@@ -1,4 +1,4 @@
-@(profilesList: java.util.List[Profile], servicesList: java.util.List[Service])
+@(profilesList: java.util.List[Profile], servicesList: java.util.List[Service], serviceOrCounty: String)
 
 @main(null) {
 
@@ -18,7 +18,7 @@
 	</script>
 	<section id="displayResults" style="padding: 30px;">
 		<div class="table-responsive">
-		<h5>All Business Profiles:</h5>
+		<h5>Business Profiles: Showing: <span style="font-weight:bold">@serviceOrCounty</span></h5>
 		<div class="element-select">
 			<div class="selectDropdownField">
 				<div class="large">
@@ -43,6 +43,7 @@
 						<select class="selectCounty" name="selectCounty" id="selectCounty">
 							<option selected="selected" value="" disabled="disabled">--- Filter By County ---</option>
 							<option value="All">All</option>
+							<option value="Statewide">Statewide</option>
 							<option value="Adams">Adams</option>
 							<option value="Alamosa">Alamosa</option>
 							<option value="Arapahoe">Arapahoe</option>
@@ -117,8 +118,10 @@
 			<thead>
 				<tr>
 					<th>Business Name</th>
-					<th>Contact</th>
-					<th>Phone</th>
+					<th>Business Hours Contact</th>
+					<th>Business Hours Phone</th>
+					<th>After Hours Contact</th>
+					<th>After Hours Phone</th>
 					<th>Services</th>
 					<th>County</th>
 				</tr>
@@ -126,16 +129,19 @@
 			<tbody>
 				@for(profile <- profilesList) {
 				<tr>
-					<td><a href="/openprofile/@profile.profilekey">@profile.name</a></td>
- 					<td><a href="/openprofile/@profile.profilekey">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
- 					<td><a href="/openprofile/@profile.profilekey">@profile.primaryPhone</a></td>
- 					<td><a href="/openprofile/@profile.profilekey">@profile.services</a></td>
- 					<td><a href="/openprofile/@profile.profilekey">@profile.county</a></td>
+					<td><a href="/editprofile/@profile.profilekey">@profile.name</a></td>
+ 					<td><a href="/editprofile/@profile.profilekey">@profile.primaryNameFirst @profile.primaryNameLast</a></td>
+ 					<td><a href="/editprofile/@profile.profilekey">@profile.primaryPhone</a></td>
+ 					<td><a href="/editprofile/@profile.profilekey">@profile.secondaryNameFirst @profile.secondaryNameLast</a></td>
+ 					<td><a href="/editprofile/@profile.profilekey">@profile.secondaryPhone</a></td>
+ 					<td><a href="/editprofile/@profile.profilekey">@profile.services</a></td>
+ 					<td><a href="/editprofile/@profile.profilekey">@profile.county</a></td>
 				</tr>
 				} 
 			</tbody>
 		</table>
 		</div>
-		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export This View</a></div>	
+		<div><a href="/exportprofiles/All" class="buttonCustomView" style="color: #FFFFFF;">Export All</a></div>	
+		<div><a href="/exportprofiles/@serviceOrCounty" class="buttonCustomView" style="color: #FFFFFF;">Export Current View</a></div>
 	</section>
 }

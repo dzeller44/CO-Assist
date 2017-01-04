@@ -77,8 +77,8 @@ Seq[Any](format.raw/*1.17*/("""
 object duplicateuser extends duplicateuser_Scope0.duplicateuser
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:32 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/account/signup/duplicateuser.scala.html
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/account/signup/duplicateuser.scala.html
                   HASH: a18600458c104ef176110db41ea79be4409be9bb
                   MATRIX: 776->1|886->16|919->24|932->30|971->32|1004->39|1388->396|1414->401|1443->402|1660->592|1708->619
                   LINES: 27->1|32->1|35->4|35->4|35->4|37->6|44->13|44->13|44->13|47->16|47->16

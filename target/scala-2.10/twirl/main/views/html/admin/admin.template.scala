@@ -62,17 +62,11 @@ Seq[Any](format.raw/*1.38*/("""
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/searchprofiles">
 						<p>
-							<img src=""""),_display_(/*34.19*/routes/*34.25*/.Assets.at("/img/icon_Export_Data.png")),format.raw/*34.64*/(""""> <b>Export Data</b>
-						</p> <span>Export Records...</span>
+							<img src=""""),_display_(/*34.19*/routes/*34.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*34.67*/(""""> <b>Search/Export Records</b>
+						</p> <span>Search and Export Business Profiles...</span>
 					</a>
 				</div>
-				<div class="col-sm-3 margbot30">
-					<a class="services_item" href="/searchprofiles">
-						<p>
-							<img src=""""),_display_(/*41.19*/routes/*41.25*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*41.67*/(""""> <b>Search Profiles</b>
-						</p> <span>Search Business Profiles...</span>
-					</a>
-				</div>
+
 			</div>
 		</div>
 		<!-- //ROW -->
@@ -105,11 +99,11 @@ Seq[Any](format.raw/*1.38*/("""
 object admin extends admin_Scope0.admin
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:32 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/admin.scala.html
-                  HASH: 3bc3c38d91be7790dd8360587150db7423ff98ba
-                  MATRIX: 768->1|899->37|927->40|945->50|984->52|1013->55|1369->384|1384->390|1443->428|1687->645|1702->651|1760->688|1988->889|2003->895|2063->934|2294->1138|2309->1144|2372->1186
-                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|51->20|51->20|51->20|58->27|58->27|58->27|65->34|65->34|65->34|72->41|72->41|72->41
+                  DATE: Tue Jan 03 14:50:29 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/admin.scala.html
+                  HASH: 4b5a8d1ad1aa501725f84f88deb749cf9bc83cb0
+                  MATRIX: 768->1|899->37|929->42|947->52|986->54|1018->60|1388->403|1403->409|1462->447|1713->671|1728->677|1786->714|2021->922|2036->928|2099->970
+                  LINES: 27->1|32->1|34->3|34->3|34->3|37->6|51->20|51->20|51->20|58->27|58->27|58->27|65->34|65->34|65->34
                   -- GENERATED --
               */
           

@@ -69,10 +69,10 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object deletedprofile extends deletedprofile_Scope0.deletedprofile
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 15 12:05:33 MST 2016
-                  SOURCE: C:/WebDev/git/PlayAuthenticate/app/views/admin/deletedprofile.scala.html
-                  HASH: 81272b27dd4641fc3e185e4c4137834e13aff290
-                  MATRIX: 851->1|864->7|903->9|932->12|1361->414|1414->446
+                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/deletedprofile.scala.html
+                  HASH: b212a1a1b9fac8f91527d80a78a8814d539874e4
+                  MATRIX: 851->1|864->7|903->9|934->14|1371->424|1424->456
                   LINES: 32->1|32->1|32->1|34->3|42->11|42->11
                   -- GENERATED --
               */
