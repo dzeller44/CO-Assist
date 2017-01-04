@@ -310,39 +310,34 @@ public class Application extends Controller {
 			
 			FindUser userform = findUserForm.get();
 	
-			String email = userform.email;
-			String name = userform.fullname;
-			String approved = userform.approved;
-			String role = userform.role;
-			
-			//System.out.println("Role from form: "+role);
-	
 			// Find the user
-			User user = User.findByEmail(email);
+			User user = User.findByEmail(userform.email);
 			
-			System.out.println(user.role + user.fullname);
-			
-			user.fullname = name;
-			
+			System.out.println("Role for user: "+user.role + " Name : " + user.fullname);
+		
+			user.setFullname(userform.fullname);  //User has certain setters/getters. Must use those if present.
+			user.approved = userform.approved;  //no setter for approved.
+
+			String role = userform.role;
+	
 			switch (role) {
 			case "user":
-				user.role = RoleType.USER;
+				user.setRole(RoleType.USER);
 				break;
 			case "manager":
-				user.role = RoleType.MANAGER;
+				user.setRole(RoleType.MANAGER);
 				break;
 			case "admin":
-				user.role = RoleType.ADMIN;
+				user.setRole(RoleType.ADMIN);
 				break;
 			default:
-				user.role = RoleType.UNDEFINED;
+				user.setRole(RoleType.UNDEFINED);
 				break;
 			}
-			
-			System.out.println("New role for user: "+user.role + "new name :" + user.fullname);
-			
-			if (approved != null && user.role == RoleType.MANAGER) {  //only do this for managers
-				if (approved.equals("Y")) {
+			if(user.role == RoleType.MANAGER) {System.out.println("We have a manager");
+				
+				if (userform.approved != null) {  
+					if (userform.approved.equals("Y")) {
 					user.approved = "Y";
 					try {
 						if(user.validated == false){   //only want to only send this if user isn't validated
@@ -362,14 +357,23 @@ public class Application extends Controller {
 						Logger.error("Can't send deny email to denied emergency manager", e);
 						flash("error", Messages.get("error.technical"));
 					}
+					}
 				}
+			} else {
+				user.approved = null;
 			}
 	
 			// Save the user...
 			user.updatedBy = AccessMiddleware.getSessionEmail();
 			user.dateUpdated = new Date();
+			
+			System.out.println("New role for user: "+user.role + " new name : " + user.fullname);
+			
 			user.save();
 	
+			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "User Account",
+					"updateUser()", "User account updated", AccessMiddleware.getSessionID());
+			
 			return ok(saveduser.render());
 		}
 	
@@ -1013,8 +1017,11 @@ public class Application extends Controller {
 		}
 		// Save the profile...
 		ProfileRegister profileForm = profileEntry.get();
+		
 		Logger.debug("updateProfile - good request");
+		
 		Profile profile = Profile.findByProfileKey(key);
+		
 		profile.name = profileForm.name;
 		profile.address = profileForm.address;
 		profile.address1 = profileForm.address1;

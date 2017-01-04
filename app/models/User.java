@@ -32,7 +32,7 @@ public class User extends Model {
 
 	@Constraints.Required
 	@Formats.NonEmpty
-	@Column(unique = true)
+	//@Column(unique = true)
 	public String fullname;
 
 	public String agency;
@@ -261,7 +261,7 @@ public class User extends Model {
 
 	/**
 	 * @param role
-	 *            the role to set
+	 * the role to set
 	 */
 	public void setRole(RoleType role) {
 		this.role = role;
@@ -277,20 +277,22 @@ public class User extends Model {
 		return roleToDisplay;
 	}
 
-	public String getFullname() {
-		return fullname;
-	}
-
 	public void setFullname(String fullname) {
 		this.fullname = fullname;
 	}
-
-	public String getUserkey() {
-		return userkey;
+	
+	public String getFullname() {
+		return fullname;
 	}
 
 	public void setUserkey(String userkey) {
 		this.userkey = userkey;
 	}
+	
+	public String getUserkey() {
+		return userkey;
+	}
+
+
 
 }

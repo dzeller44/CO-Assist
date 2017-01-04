@@ -29,7 +29,7 @@ public class RemovedUser extends Model {
 
     @Constraints.Required
     @Formats.NonEmpty
-    @Column(unique = true)
+   // @Column(unique = true)
     public String fullname;
     
     public String agency;
