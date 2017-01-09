@@ -56,7 +56,7 @@ Seq[Any](format.raw/*1.14*/("""
 object emailValidate extends emailValidate_Scope0.emailValidate
               /*
                   -- GENERATED --
-                  DATE: Wed Jan 04 08:49:47 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/account/settings/emailValidate.scala.html
                   HASH: e276b576ead2c1b9aabfb1e0a4375f1cf9fb6d9f
                   MATRIX: 776->1|898->13|928->35|956->38|968->43|1010->77|1049->79|1083->88|1111->96

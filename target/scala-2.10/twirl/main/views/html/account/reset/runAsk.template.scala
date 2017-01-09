@@ -80,7 +80,7 @@ Seq[Any](format.raw/*4.2*/("""
 object runAsk extends runAsk_Scope0.runAsk_Scope1.runAsk
               /*
                   -- GENERATED --
-                  DATE: Wed Jan 04 08:49:47 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/account/reset/runAsk.scala.html
                   HASH: 5d5049c3a6bb2dda6b4d74dc7cc7875ebb928f31
                   MATRIX: 881->19|913->43|1002->103|1032->108|1045->114|1084->116|1114->120|1476->456|1522->481|1635->567|1690->601|1798->682|1837->700|1983->816

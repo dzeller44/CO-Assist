@@ -84,7 +84,7 @@ Seq[Any](format.raw/*1.52*/("""
 object ask extends ask_Scope0.ask
               /*
                   -- GENERATED --
-                  DATE: Wed Jan 04 08:49:47 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/account/reset/ask.scala.html
                   HASH: 7eb0c6dd2cea788e480ed55abde03a06b6ee16d9
                   MATRIX: 788->1|940->78|972->102|1070->51|1100->73|1130->170|1162->177|1175->183|1214->185|1246->190|1607->524|1653->549|2060->929|2098->946|2169->990|2208->1008|2359->1129

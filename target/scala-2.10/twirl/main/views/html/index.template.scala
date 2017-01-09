@@ -100,7 +100,7 @@ Seq[Any](format.raw/*1.78*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Wed Jan 04 08:49:47 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/index.scala.html
                   HASH: c402aa573faf1a777a89576215c1b866d0d456be
                   MATRIX: 789->1|960->77|990->82|1008->92|1047->94|1079->100|1484->478|1499->484|1556->520|1805->742|1820->748|1883->790|2143->1023|2158->1029|2212->1062

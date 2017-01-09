@@ -21,15 +21,15 @@ import play.data._
 import play.api.data.Field
 import play.mvc.Http.Context.Implicit._
 
-class searchusers extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Form[Application.Login],java.util.List[User],play.twirl.api.HtmlFormat.Appendable] {
+class searchusers extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[java.util.List[User],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(loginForm: Form[Application.Login], userList: java.util.List[User]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(userList: java.util.List[User]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.70*/("""
+Seq[Any](format.raw/*1.34*/("""
 
 """),_display_(/*3.2*/main(null)/*3.12*/ {_display_(Seq[Any](format.raw/*3.14*/("""
 
@@ -102,9 +102,9 @@ Seq[Any](format.raw/*1.70*/("""
     }
   }
 
-  def render(loginForm:Form[Application.Login],userList:java.util.List[User]): play.twirl.api.HtmlFormat.Appendable = apply(loginForm,userList)
+  def render(userList:java.util.List[User]): play.twirl.api.HtmlFormat.Appendable = apply(userList)
 
-  def f:((Form[Application.Login],java.util.List[User]) => play.twirl.api.HtmlFormat.Appendable) = (loginForm,userList) => apply(loginForm,userList)
+  def f:((java.util.List[User]) => play.twirl.api.HtmlFormat.Appendable) = (userList) => apply(userList)
 
   def ref: this.type = this
 
@@ -117,10 +117,10 @@ Seq[Any](format.raw/*1.70*/("""
 object searchusers extends searchusers_Scope0.searchusers
               /*
                   -- GENERATED --
-                  DATE: Wed Jan 04 08:49:48 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/searchusers.scala.html
-                  HASH: 83cc4c5e9973da0fee642992c08d50bfe825c441
-                  MATRIX: 801->1|964->69|994->74|1012->84|1051->86|1082->91|1122->105|1136->111|1196->151|1273->202|1287->208|1352->253|1428->303|1442->309|1493->340|1624->444|1652->445|1684->450|1743->482|1771->483|1834->518|1863->519|1895->524|1955->557|1983->558|2416->965|2483->1016|2522->1017|2556->1024|2628->1069|2641->1073|2673->1084|2703->1087|2716->1091|2746->1100|2823->1150|2836->1154|2868->1165|2898->1168|2911->1172|2943->1183|3020->1233|3033->1237|3065->1248|3095->1251|3108->1255|3163->1289|3240->1339|3253->1343|3285->1354|3315->1357|3328->1361|3358->1370|3417->1399|3450->1405|3936->1865|3973->1886|4013->1888|4047->1895|4119->1940|4132->1944|4164->1955|4194->1958|4207->1962|4237->1971|4314->2021|4327->2025|4359->2036|4389->2039|4402->2043|4434->2054|4511->2104|4524->2108|4556->2119|4586->2122|4599->2126|4654->2160|4713->2189|4747->2196
+                  HASH: 4f1764597bf88ee0e965c6a52e3f5c9645750185
+                  MATRIX: 777->1|904->33|934->38|952->48|991->50|1022->55|1062->69|1076->75|1136->115|1213->166|1227->172|1292->217|1368->267|1382->273|1433->304|1564->408|1592->409|1624->414|1683->446|1711->447|1774->482|1803->483|1835->488|1895->521|1923->522|2356->929|2423->980|2462->981|2496->988|2568->1033|2581->1037|2613->1048|2643->1051|2656->1055|2686->1064|2763->1114|2776->1118|2808->1129|2838->1132|2851->1136|2883->1147|2960->1197|2973->1201|3005->1212|3035->1215|3048->1219|3103->1253|3180->1303|3193->1307|3225->1318|3255->1321|3268->1325|3298->1334|3357->1363|3390->1369|3876->1829|3913->1850|3953->1852|3987->1859|4059->1904|4072->1908|4104->1919|4134->1922|4147->1926|4177->1935|4254->1985|4267->1989|4299->2000|4329->2003|4342->2007|4374->2018|4451->2068|4464->2072|4496->2083|4526->2086|4539->2090|4594->2124|4653->2153|4687->2160
                   LINES: 27->1|32->1|34->3|34->3|34->3|36->5|36->5|36->5|36->5|37->6|37->6|37->6|38->7|38->7|38->7|40->9|40->9|41->10|42->11|42->11|43->12|43->12|44->13|45->14|45->14|60->29|61->30|61->30|62->31|63->32|63->32|63->32|63->32|63->32|63->32|64->33|64->33|64->33|64->33|64->33|64->33|65->34|65->34|65->34|65->34|65->34|65->34|66->35|66->35|66->35|66->35|66->35|66->35|68->37|69->38|88->57|88->57|88->57|89->58|90->59|90->59|90->59|90->59|90->59|90->59|91->60|91->60|91->60|91->60|91->60|91->60|92->61|92->61|92->61|92->61|92->61|92->61|94->63|95->64
                   -- GENERATED --
               */

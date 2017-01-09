@@ -69,7 +69,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object created extends created_Scope0.created
               /*
                   -- GENERATED --
-                  DATE: Wed Jan 04 08:49:48 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/account/signup/created.scala.html
                   HASH: 04608d89ca6a6a1943815633a72003a654c8222b
                   MATRIX: 846->1|859->7|898->9|929->14|1366->424|1417->454
