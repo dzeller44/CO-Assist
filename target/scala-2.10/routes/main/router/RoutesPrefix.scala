@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/workspace/COAssist/conf/routes
-// @DATE:Mon Jan 09 13:59:48 MST 2017
+// @DATE:Thu Jan 12 11:28:12 MST 2017
 
 
 package router {

@@ -103,7 +103,7 @@ Seq[Any](_display_(/*2.2*/main(null)/*2.12*/ {_display_(Seq[Any](format.raw/*2.1
 object openuser extends openuser_Scope0.openuser
               /*
                   -- GENERATED --
-                  DATE: Mon Jan 09 13:59:48 MST 2017
+                  DATE: Thu Jan 12 11:28:13 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/openuser.scala.html
                   HASH: 3d5330f9dba50df2c0d017b3a74bb617af5381c7
                   MATRIX: 839->3|857->13|896->15|926->19|2515->1581|2554->1599|2624->1642|2663->1660|2809->1776

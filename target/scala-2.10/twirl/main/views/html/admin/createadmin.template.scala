@@ -93,7 +93,7 @@ Seq[Any](format.raw/*1.54*/("""
 object createadmin extends createadmin_Scope0.createadmin
               /*
                   -- GENERATED --
-                  DATE: Mon Jan 09 13:59:48 MST 2017
+                  DATE: Thu Jan 12 11:28:13 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/createadmin.scala.html
                   HASH: 41ee16dcea39a4ff9c7a871b54a7230ca5b64939
                   MATRIX: 788->1|935->53|965->58|983->68|1022->70|1052->74|2058->1054|2104->1091|2144->1093|2184->1105|2286->1180|2312->1197|2353->1217|2393->1229|2439->1245|2470->1249|2615->1367|2654->1385|2800->1501
