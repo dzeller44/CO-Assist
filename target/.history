@@ -266,3 +266,17 @@ compile
 run
 compile
 run
+clean
+compile
+compile -Xlint
+run
+clean
+compile
+run
+clean
+compile
+dist
+run
+clean
+compile
+dist

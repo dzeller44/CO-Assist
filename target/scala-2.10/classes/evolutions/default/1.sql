@@ -118,7 +118,6 @@ create table removed_user (
   date_removed              datetime(6),
   constraint ck_removed_user_role check (role in ('0','2','3','1')),
   constraint uq_removed_user_email unique (email),
-  constraint uq_removed_user_fullname unique (fullname),
   constraint pk_removed_user primary key (id))
 ;
 
@@ -169,7 +168,6 @@ create table user (
   date_updated              datetime(6),
   constraint ck_user_role check (role in ('0','2','3','1')),
   constraint uq_user_email unique (email),
-  constraint uq_user_fullname unique (fullname),
   constraint pk_user primary key (id))
 ;
 

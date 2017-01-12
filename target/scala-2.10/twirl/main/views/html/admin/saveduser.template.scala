@@ -72,7 +72,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object saveduser extends saveduser_Scope0.saveduser
               /*
                   -- GENERATED --
-                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/saveduser.scala.html
                   HASH: 74aa41680a70649ed12cc4e9f26508958259dced
                   MATRIX: 841->1|854->7|893->9|923->13|1378->441|1431->473|1705->717

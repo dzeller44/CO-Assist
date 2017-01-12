@@ -58,22 +58,15 @@ Seq[Any](format.raw/*1.99*/("""
 		</div>
 		<div class="element-select">
 			<label class="title"><span class="required">*</span>Account
-			Role:</label>
+			Role: <b>"""),_display_(/*30.14*/userRole/*30.22*/.capitalize),format.raw/*30.33*/("""</b></label>
 			<div class="item-cont">
 				<div class="large">
 					<span>
-						<select name="role" value=""""),_display_(/*34.35*/userRole),format.raw/*34.43*/("""" required="required">
-						"""),_display_(/*35.8*/if(userRole == "user")/*35.30*/ {_display_(Seq[Any](format.raw/*35.32*/("""
-							"""),format.raw/*36.8*/("""<option value="none">Select Role...</option>
-							<option value="user" selected>Business User</option>
-							<option value="manager">Emergency Manager</option>
-						""")))}),format.raw/*39.8*/("""
-						"""),format.raw/*40.7*/("""else """),format.raw/*40.12*/("""{"""),format.raw/*40.13*/("""
-							"""),format.raw/*41.8*/("""<option value="none">Select Role...</option>
-							<option value="user">Business User</option>
-							<option value="manager" selected>Emergency Manager</option>
-						"""),format.raw/*44.7*/("""}"""),format.raw/*44.8*/("""
-						"""),format.raw/*45.7*/("""</select>
+						<select name="role" required="required">
+							<option """),_display_(/*35.17*/if(userRole == "user")/*35.39*/ {_display_(Seq[Any](format.raw/*35.41*/("""selected="selected"""")))}),format.raw/*35.61*/(""" """),format.raw/*35.62*/("""value="user">Business User</option>
+							<option """),_display_(/*36.17*/if(userRole == "manager")/*36.42*/ {_display_(Seq[Any](format.raw/*36.44*/("""selected="selected"""")))}),format.raw/*36.64*/(""" """),format.raw/*36.65*/("""value="manager">Emergency Manager</option>
+
+						</select>
 						<i></i><span class="icon-place"></span>
 					</span>
 				</div>
@@ -93,18 +86,18 @@ Seq[Any](format.raw/*1.99*/("""
   			<span class="clearfix"></span>
   		</div>	
 		<div class="element-input">
-		    """),_display_(/*65.8*/if(findUserForm.hasGlobalErrors)/*65.40*/ {_display_(Seq[Any](format.raw/*65.42*/("""
-        		"""),format.raw/*66.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
-            		"""),_display_(/*67.16*/findUserForm/*67.28*/.globalError.message),format.raw/*67.48*/("""
-        		"""),format.raw/*68.11*/("""</span>
-   			""")))}),format.raw/*69.8*/("""
-		"""),format.raw/*70.3*/("""</div>
+		    """),_display_(/*58.8*/if(findUserForm.hasGlobalErrors)/*58.40*/ {_display_(Seq[Any](format.raw/*58.42*/("""
+        		"""),format.raw/*59.11*/("""<span class="errorMessageDisplay" style="color: #d9534f;">
+            		"""),_display_(/*60.16*/findUserForm/*60.28*/.globalError.message),format.raw/*60.48*/("""
+        		"""),format.raw/*61.11*/("""</span>
+   			""")))}),format.raw/*62.8*/("""
+		"""),format.raw/*63.3*/("""</div>
 		<div class="submit">
-			<input type="submit" value="""),_display_(/*72.32*/Messages("submit")),format.raw/*72.50*/(""" """),format.raw/*72.51*/("""/>
-			<a href="/admin" class="buttonCancel">"""),_display_(/*73.43*/Messages("goback")),format.raw/*73.61*/("""</a>
+			<input type="submit" value="""),_display_(/*65.32*/Messages("submit")),format.raw/*65.50*/(""" """),format.raw/*65.51*/("""/>
+			<a href="/admin" class="buttonCancel">"""),_display_(/*66.43*/Messages("goback")),format.raw/*66.61*/("""</a>
 		</div>
 		<div class="submit">
-			<a href="javascript:deleteUser('"""),_display_(/*76.37*/userEmail),format.raw/*76.46*/("""')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
+			<a href="javascript:deleteUser('"""),_display_(/*69.37*/userEmail),format.raw/*69.46*/("""')" class="buttonDelete" style="color: #FFFFFF;">Delete</a>
 		</div>
 		<!-- This is needed for bottom shadow to appear... -->
 		<div></div>
@@ -112,7 +105,7 @@ Seq[Any](format.raw/*1.99*/("""
 
 </section>
 
-""")))}),format.raw/*84.2*/("""
+""")))}),format.raw/*77.2*/("""
 """))
       }
     }
@@ -133,11 +126,11 @@ Seq[Any](format.raw/*1.99*/("""
 object showuser extends showuser_Scope0.showuser
               /*
                   -- GENERATED --
-                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/showuser.scala.html
-                  HASH: 34dc2cb3fa7a2c5ede1f61b9fdf46cd97ff3fe8d
-                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1434->420|1448->426|1493->451|1850->781|1879->789|2197->1080|2227->1089|2527->1362|2556->1370|2613->1401|2644->1423|2684->1425|2720->1434|2923->1607|2958->1615|2991->1620|3020->1621|3056->1630|3255->1802|3283->1803|3318->1811|3911->2378|3952->2410|3992->2412|4032->2424|4134->2499|4155->2511|4196->2531|4236->2543|4282->2559|4313->2563|4403->2626|4442->2644|4471->2645|4544->2691|4583->2709|4686->2785|4716->2794|4917->2965
-                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|49->18|49->18|56->25|56->25|65->34|65->34|66->35|66->35|66->35|67->36|70->39|71->40|71->40|71->40|72->41|75->44|75->44|76->45|96->65|96->65|96->65|97->66|98->67|98->67|98->67|99->68|100->69|101->70|103->72|103->72|103->72|104->73|104->73|107->76|107->76|115->84
+                  HASH: 0ead0dfa2be9722e2e693225e3db6d5fa2050531
+                  MATRIX: 798->1|990->98|1020->103|1038->113|1077->115|1107->119|1434->420|1448->426|1493->451|1850->781|1879->789|2197->1080|2227->1089|2422->1257|2439->1265|2471->1276|2642->1420|2673->1442|2713->1444|2764->1464|2793->1465|2873->1518|2907->1543|2947->1545|2998->1565|3027->1566|3672->2185|3713->2217|3753->2219|3793->2231|3895->2306|3916->2318|3957->2338|3997->2350|4043->2366|4074->2370|4164->2433|4203->2451|4232->2452|4305->2498|4344->2516|4447->2592|4477->2601|4678->2772
+                  LINES: 27->1|32->1|34->3|34->3|34->3|36->5|40->9|40->9|40->9|49->18|49->18|56->25|56->25|61->30|61->30|61->30|66->35|66->35|66->35|66->35|66->35|67->36|67->36|67->36|67->36|67->36|89->58|89->58|89->58|90->59|91->60|91->60|91->60|92->61|93->62|94->63|96->65|96->65|96->65|97->66|97->66|100->69|100->69|108->77
                   -- GENERATED --
               */
           

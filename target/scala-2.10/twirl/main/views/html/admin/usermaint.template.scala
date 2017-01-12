@@ -46,13 +46,13 @@ Seq[Any](format.raw/*1.38*/("""
 
 			<!-- ROW -->
 			<div class="row">
-				<div class="col-sm-3 margbot30">
+				<!--<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/adduser">
 						<p>
 							<img src=""""),_display_(/*21.19*/routes/*21.25*/.Assets.at("/img/icon_Add_User2.png")),format.raw/*21.62*/(""""> <b>Add User</b>
 						</p> <span>Add new user...</span>
 					</a>
-				</div>
+				</div>-->
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/finduser">
 						<p>
@@ -70,7 +70,7 @@ Seq[Any](format.raw/*1.38*/("""
 				<div class="col-sm-3 margbot30">
 					<a class="services_item" href="/search">
 						<p>
-						<img src=""""),_display_(/*42.18*/routes/*42.24*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*42.66*/(""""> <b>Search Records</b>
+						<img src=""""),_display_(/*42.18*/routes/*42.24*/.Assets.at("/img/icon_Search_Records.png")),format.raw/*42.66*/(""""> <b>Search All Users</b>
 						</p> <span>Search User Records...</span>
 					</a>
 				</div>
@@ -106,10 +106,10 @@ Seq[Any](format.raw/*1.38*/("""
 object usermaint extends usermaint_Scope0.usermaint
               /*
                   -- GENERATED --
-                  DATE: Tue Jan 03 14:50:30 MST 2017
+                  DATE: Mon Jan 09 13:59:48 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/usermaint.scala.html
-                  HASH: 243e4b22b8f7e52e5c0afb4fb4cf51a2bb2f3dd6
-                  MATRIX: 776->1|907->37|937->42|955->52|994->54|1026->60|1428->435|1443->441|1501->478|1728->678|1743->684|1801->721|2039->932|2054->938|2114->977|2353->1189|2368->1195|2431->1237
+                  HASH: e68d54c1f5783972665701447c475a51ce4e534c
+                  MATRIX: 776->1|907->37|937->42|955->52|994->54|1026->60|1432->439|1447->445|1505->482|1735->685|1750->691|1808->728|2046->939|2061->945|2121->984|2360->1196|2375->1202|2438->1244
                   LINES: 27->1|32->1|34->3|34->3|34->3|37->6|52->21|52->21|52->21|59->28|59->28|59->28|66->35|66->35|66->35|73->42|73->42|73->42
                   -- GENERATED --
               */

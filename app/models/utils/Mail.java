@@ -89,8 +89,8 @@ public class Mail {
             Email email = new Email();
 
             final Configuration root = Configuration.root();
-            final String mailFrom = root.getString("mail.from");
-            final String mailSign = root.getString("mail.sign");
+            final String mailFrom = root.getString("play.mailer.from");
+            final String mailSign = root.getString("play.mailer.signature");
 
             email.setFrom(mailFrom);
             email.setSubject(envelop.subject);
@@ -102,11 +102,11 @@ public class Mail {
             }
 
             mailerClient.send(email);
-            Logger.debug("Mail sent - SMTP:" + root.getString("smtp.host")
-                    + ":" + root.getString("smtp.port")
-                    + " SSL:" + root.getString("smtp.ssl")
-                    + " user:" + root.getString("smtp.user")
-                    + " password:" + root.getString("smtp.password"));
+            Logger.debug("Mail sent - SMTP:" + root.getString("play.mailer.host")
+                    + ":" + root.getString("play.mailer.port")
+                    + " SSL:" + root.getString("play.mailer.ssl")
+                    + " user:" + root.getString("play.mailer.user")
+                    + " password:" + root.getString("play.mailer.password"));
         }
     }
 }
