@@ -171,7 +171,7 @@ public class Token extends Model {
         String newURL = null;
 
         // Should use reverse routing here.
-        String urlString = urlString = "http://" + externalServer + "/" + type.urlPath + "/" + token.token;
+        String urlString = Messages.get("url") + externalServer + "/" + type.urlPath + "/" + token.token;
         URL url = new URL(urlString); // validate the URL
 
         switch (type) {

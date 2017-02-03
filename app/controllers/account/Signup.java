@@ -262,7 +262,7 @@ public class Signup extends Controller {
 	private void sendMailAskForConfirmation(User user) throws EmailException, MalformedURLException {
 		String subject = Messages.get("mail.confirm.subject");
 
-		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		String urlString = Messages.get("url") + Configuration.root().getString("server.hostname");
 		urlString += "/confirm/" + user.confirmationToken;
 		URL url = new URL(urlString); // validate the URL, will throw an
 										// exception if bad.
@@ -276,7 +276,7 @@ public class Signup extends Controller {
 	private void sendMailAdminConfirm(String admin, String email) throws EmailException, MalformedURLException {
 		String subject = Messages.get("mail.admin.subject");
 
-		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		String urlString = Messages.get("url") + Configuration.root().getString("server.hostname");
 		urlString += "/finduserurl?email=" + email;
 		URL url = new URL(urlString); // validate the URL, will throw an
 										// exception if bad.

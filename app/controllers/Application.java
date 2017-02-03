@@ -681,7 +681,7 @@ public class Application extends Controller {
 	public void sendMailEMDenied(User user) throws EmailException, MalformedURLException {
 		String subject = Messages.get("mail.deny.subject");
 	
-		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		String urlString = Messages.get("url") + Configuration.root().getString("server.hostname");
 		urlString += "/confirm/" + user.confirmationToken;
 		URL url = new URL(urlString); // validate the URL, will throw an
 										// exception if bad.
@@ -695,7 +695,7 @@ public class Application extends Controller {
 	private void sendMailManagerConfirmation(User user) throws EmailException, MalformedURLException {
 		String subject = Messages.get("mail.managerconfirm.subject");
 	
-		String urlString = "http://" + Configuration.root().getString("server.hostname");
+		String urlString = Messages.get("url") + Configuration.root().getString("server.hostname");
 		urlString += "/confirm/" + user.confirmationToken;
 		URL url = new URL(urlString); // validate the URL, will throw an
 										// exception if bad.
