@@ -290,3 +290,5 @@ clean
 compile
 disy
 dist
+run
+clean
