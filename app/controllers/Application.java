@@ -1682,5 +1682,14 @@ public class Application extends Controller {
 	/********************************************************************************
 	 End contact page
 	 ********************************************************************************/
+
+	public Result sendTestEmail() {
+		String subject = "Simple email";
+		String to = "dan.zeller@state.co.us";
+		Mail.Envelop envelop = new Mail.Envelop(subject, "Test Message", to);
+		Mail mailer = new Mail(mailerClient);
+		mailer.sendMail(envelop);		
+		return ok(contactsent.render());
+	}
 	
 }  //end application.java
