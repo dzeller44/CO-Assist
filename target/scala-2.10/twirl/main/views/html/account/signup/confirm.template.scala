@@ -73,7 +73,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object confirm extends confirm_Scope0.confirm
               /*
                   -- GENERATED --
-                  DATE: Mon Jan 09 13:59:48 MST 2017
+                  DATE: Thu Jan 12 11:28:13 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/account/signup/confirm.scala.html
                   HASH: 04f5561c794499723cc56cbe6a141d0568d3f0eb
                   MATRIX: 846->1|859->7|898->9|928->13|1374->432|1420->457|1453->463|1482->466|1537->500|1806->739

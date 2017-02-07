@@ -83,7 +83,7 @@ Seq[Any](format.raw/*1.44*/("""
 object getuser extends getuser_Scope0.getuser
               /*
                   -- GENERATED --
-                  DATE: Mon Jan 09 13:59:48 MST 2017
+                  DATE: Thu Jan 12 11:28:13 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/getuser.scala.html
                   HASH: 14c4307d00f58d9872cbd3be16c02965c844a2e5
                   MATRIX: 775->1|912->43|942->48|960->58|999->60|1029->64|1714->723|1755->755|1795->757|1835->769|1937->844|1958->856|1999->876|2039->888|2085->904|2116->908|2253->1018|2292->1036

@@ -280,3 +280,13 @@ run
 clean
 compile
 dist
+exit
+clean
+compile
+clean
+compile
+dist
+clean
+compile
+disy
+dist

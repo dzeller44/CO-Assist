@@ -69,7 +69,7 @@ Seq[Any](_display_(/*1.2*/main()/*1.8*/ {_display_(Seq[Any](format.raw/*1.10*/("
 object createdadmin extends createdadmin_Scope0.createdadmin
               /*
                   -- GENERATED --
-                  DATE: Mon Jan 09 13:59:48 MST 2017
+                  DATE: Thu Jan 12 11:28:13 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/admin/createdadmin.scala.html
                   HASH: 31b22c1b20be2b2ac9e2ca64ab6415e9be46901c
                   MATRIX: 847->1|860->7|899->9|930->14|1367->424|1428->464

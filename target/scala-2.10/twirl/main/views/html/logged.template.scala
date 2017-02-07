@@ -63,7 +63,7 @@ Seq[Any](format.raw/*1.14*/("""
 object logged extends logged_Scope0.logged
               /*
                   -- GENERATED --
-                  DATE: Mon Jan 09 13:59:48 MST 2017
+                  DATE: Thu Jan 12 11:28:13 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/logged.scala.html
                   HASH: 5702257670939f834d456c32f7ede974c64fca11
                   MATRIX: 745->1|852->13|882->18|906->34|945->36|977->42|1176->214|1189->218|1219->227|1248->228|1371->325|1390->336|1448->374|1507->406|1548->426|1659->510|1674->516|1716->537|1778->572|1818->590|1905->647

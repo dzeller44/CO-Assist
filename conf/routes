@@ -3,9 +3,6 @@
 # ~~~~
 
 # Home page
-
-GET    /testemail                  controllers.Application.sendTestEmail()
-
 GET    /                           controllers.Application.index()
 GET    /dashboard                  controllers.Dashboard.index()
 

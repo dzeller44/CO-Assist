@@ -75,7 +75,7 @@ Seq[Any](format.raw/*1.71*/("""
 object success extends success_Scope0.success
               /*
                   -- GENERATED --
-                  DATE: Mon Jan 09 13:59:48 MST 2017
+                  DATE: Thu Jan 12 11:28:13 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/account/reset/success.scala.html
                   HASH: 8b93992b74061a2ab5e3e47563b5a67bc746aa85
                   MATRIX: 805->1|976->97|1008->121|1106->70|1136->92|1166->189|1196->194|1209->200|1248->202|1280->207|1716->616|1770->649

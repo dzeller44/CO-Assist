@@ -74,7 +74,7 @@ Seq[Any](format.raw/*1.73*/("""
 object email extends email_Scope0.email
               /*
                   -- GENERATED --
-                  DATE: Mon Jan 09 13:59:48 MST 2017
+                  DATE: Thu Jan 12 11:28:13 MST 2017
                   SOURCE: C:/WebDev/workspace/COAssist/app/views/account/settings/email.scala.html
                   HASH: 2ffc2dc5d3ebdc76a8e71cb3ecf16bc67cf40b1a
                   MATRIX: 809->1|990->72|1020->94|1048->97|1060->102|1102->136|1141->138|1175->147|1229->181|1263->190|1291->198|1326->207|1393->265|1433->267|1472->279|1520->300|1709->468|1746->478|1889->594|1930->614|1985->639

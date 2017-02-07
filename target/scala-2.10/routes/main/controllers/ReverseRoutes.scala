@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/WebDev/workspace/COAssist/conf/routes
-// @DATE:Mon Jan 09 13:59:48 MST 2017
+// @DATE:Thu Jan 12 11:28:12 MST 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -10,17 +10,17 @@ import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamic
 import _root_.controllers.Assets.Asset
 import _root_.play.libs.F
 
-// @LINE:7
+// @LINE:6
 package controllers {
 
-  // @LINE:116
+  // @LINE:113
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:116
+    // @LINE:113
     def at(file:String): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -28,14 +28,14 @@ package controllers {
   
   }
 
-  // @LINE:10
+  // @LINE:7
   class ReverseDashboard(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:10
+    // @LINE:7
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "dashboard")
@@ -43,19 +43,19 @@ package controllers {
   
   }
 
-  // @LINE:7
+  // @LINE:6
   class ReverseApplication(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:40
+    // @LINE:37
     def managerHome(): Call = {
     
       () match {
       
-        // @LINE:40
+        // @LINE:37
         case ()  =>
           import ReverseRouteContext.empty
           Call("GET", _prefix + { _defaultPrefix } + "em")
@@ -64,42 +64,42 @@ package controllers {
     
     }
   
-    // @LINE:69
+    // @LINE:66
     def updateUser(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "updateuser")
     }
   
-    // @LINE:56
+    // @LINE:53
     def getProfilesByService(service:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "searchbyservice" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("service", service)))))
     }
   
-    // @LINE:77
+    // @LINE:74
     def openUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "openuser")
     }
   
-    // @LINE:54
+    // @LINE:51
     def getAllProfiles(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "searchprofiles")
     }
   
-    // @LINE:48
+    // @LINE:45
     def adminHome(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "admin")
     }
   
-    // @LINE:32
+    // @LINE:29
     def openProfile(name:String): Call = {
     
       (name: @unchecked) match {
       
-        // @LINE:32
+        // @LINE:29
         case (name)  =>
           import ReverseRouteContext.empty
           Call("GET", _prefix + { _defaultPrefix } + "openprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
@@ -108,156 +108,150 @@ package controllers {
     
     }
   
-    // @LINE:82
+    // @LINE:79
     def getUserByUrl(email:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "finduserurl" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("email", email)))))
     }
   
-    // @LINE:44
+    // @LINE:41
     def viewProfileManager(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "viewProfileManager/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:73
+    // @LINE:70
     def exportOpenFile(fileName:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "exportOpenFile/" + implicitly[PathBindable[String]].unbind("fileName", dynamicString(fileName)))
     }
   
-    // @LINE:75
+    // @LINE:72
     def exportProfiles(data:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "exportprofiles/" + implicitly[PathBindable[String]].unbind("data", dynamicString(data)))
     }
   
-    // @LINE:16
+    // @LINE:13
     def contactSend(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "contact")
     }
   
-    // @LINE:67
+    // @LINE:64
     def getUserByEmail(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "finduser")
     }
   
-    // @LINE:43
+    // @LINE:40
     def getAllProfilesManager(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "managersearchprofiles")
     }
   
-    // @LINE:25
+    // @LINE:22
     def userHome(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "user")
     }
   
-    // @LINE:7
-    def sendTestEmail(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "testemail")
-    }
-  
-    // @LINE:63
+    // @LINE:60
     def deleteProfileConfirm(name:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "deleteprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:33
+    // @LINE:30
     def updateProfile(name:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "openprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:58
+    // @LINE:55
     def getProfilesByCounty(county:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "searchbycounty" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("county", county)))))
     }
   
-    // @LINE:13
+    // @LINE:10
     def logout(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:50
+    // @LINE:47
     def userMaintenance(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "adminuser")
     }
   
-    // @LINE:27
+    // @LINE:24
     def addProfile(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "addprofile")
     }
   
-    // @LINE:28
+    // @LINE:25
     def saveProfile(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "addprofile")
     }
   
-    // @LINE:61
+    // @LINE:58
     def updateProfileAdmin(name:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "editprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:19
+    // @LINE:16
     def openLogin(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "auth")
     }
   
-    // @LINE:22
+    // @LINE:19
     def accessDenied(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "accessdenied")
     }
   
-    // @LINE:64
+    // @LINE:61
     def deleteProfile(name:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "deleteprofile/" + implicitly[PathBindable[String]].unbind("name", dynamicString(name)))
     }
   
-    // @LINE:84
+    // @LINE:81
     def deleteUserConfirm(email:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "deleteuser/" + implicitly[PathBindable[String]].unbind("email", dynamicString(email)))
     }
   
-    // @LINE:66
+    // @LINE:63
     def findUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "finduser")
     }
   
-    // @LINE:30
+    // @LINE:27
     def getProfilesByUser(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "getprofiles")
     }
   
-    // @LINE:85
+    // @LINE:82
     def deleteUser(email:String): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "deleteuser/" + implicitly[PathBindable[String]].unbind("email", dynamicString(email)))
     }
   
-    // @LINE:12
+    // @LINE:9
     def authenticate(): Call = {
     
       () match {
       
-        // @LINE:12
+        // @LINE:9
         case ()  =>
           import ReverseRouteContext.empty
           Call("POST", _prefix + { _defaultPrefix } + "login")
@@ -266,37 +260,37 @@ package controllers {
     
     }
   
-    // @LINE:52
+    // @LINE:49
     def getAllUsers(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "search")
     }
   
-    // @LINE:9
+    // @LINE:6
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix)
     }
   
-    // @LINE:15
+    // @LINE:12
     def contact(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "contact")
     }
   
-    // @LINE:36
+    // @LINE:33
     def openUserAccount(email:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "useraccount" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("email", email)))))
     }
   
-    // @LINE:37
+    // @LINE:34
     def updateUserAccount(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "useraccount")
     }
   
-    // @LINE:71
+    // @LINE:68
     def exportUsers(data:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "exportusers/" + implicitly[PathBindable[String]].unbind("data", dynamicString(data)))
