@@ -1,4 +1,4 @@
-title=CO-Assist
+title=CO-ASSIST
 
 confirm=Confirmation
 email=Email
@@ -12,9 +12,12 @@ reset=Reset
 cancel=Cancel
 submit=Submit
 
-email.principal.address=cdps_dhsem_co-assist@state.co.us
-email.remind.subject=CO-Assist: Please update your User Profile.
-email.remind.message=Please take the time to update your CO-Assist User Profile.
+url=https://
+
+email.principal.address=cdps_dhsem_CO-ASSIST@state.co.us
+
+email.remind.subject=CO-ASSIST: Please Update your CO-ASSIST Information
+email.remind.message=Hello, <br>Thank you for your continued partnership with the Colorado Department of Public Safety through CO-ASSIST! Please take a moment to log in at co-assist.state.co.us to review your contact information. We appreciate your support. Thank you, <br>Colorado Division of Homeland Security and Emergency Management Logistics Team
 
 account.not.validated.check.mail=Account not validated. Check your emails.
 account.successfully.validated=Account successfully validated
@@ -61,8 +64,10 @@ resetpassword.success=Your password has been reset.
 resetpassword.new.password=Reset Your Password
 
 admin.default.password=P@ssword!4
-admin.newaccount.subject=CO-Assist - New Admin Validate email
-admin.newaccount.message=You have been added as an Admin to CO-Assist.  Please change your password.  <br> Click on this link : {0} to change your password.
+
+admin.newaccount.subject=Welcome to CO-ASSIST - Your CO-ASSIST Admin Account has been created and requires confirmation.
+admin.newaccount.message=Hello, <br>You have been added as an Admin to CO-ASSIST.  Please click on this link : {0} to set your password. Thank you, <br>Colorado Division of Homeland Security and Emergency Management
+
 admin.newaccount.msg.created=The new Admin has been created successfully.  An email has been sent to the email that was entered.
 admin.delete.account=The User Account has been successfully deleted.
 admin.delete.profile=The Business Profile has been successfully deleted.
@@ -76,31 +81,33 @@ search.user.bademail=The user does not exist.
 
 changemail.mailsent=A mail has been sent, please check your mail.
 
-mail.confirm.subject=Welcome to CO-Assist - Confirm your Account
-mail.confirm.message=Welcome to CO-Assist. <br> Click on this link : {0} to confirm your email.
-mail.admin.subject=CO-Assist - New Emergency Manager account needs approval
-mail.admin.message=CO-Assist <br> Click on this link : {0} to approve this Emergency Manager account.
+mail.confirm.subject=Welcome to CO-ASSIST - Your CO-ASSIST Business User Account requires confirmation.
+mail.confirm.message=Welcome to CO-ASSIST. <br> Hello, <br>Your business user account profile in CO-ASSIST has been created. Please click on this link : {0} to confirm your account. Thank you, <br>Colorado Division of Homeland Security and Emergency Management
 
-mail.managerconfirm.subject=Welcome to CO-Assist - Confirm your Account
-mail.managerconfirm.message=Welcome to CO-Assist. <br>Your Emergency Manager account has been approved. Click on this link : {0} to confirm your email.
+mail.admin.subject=CO-ASSIST - New Emergency Manager account needs approval
+mail.admin.message=CO-ASSIST <br> Click on this link : {0} to approve this Emergency Manager account.
+
+mail.managerconfirm.subject=Welcome to CO-ASSIST - Your CO-ASSIST Emergency Manager Account has been approved and requires confirmation.
+mail.managerconfirm.message=Welcome to CO-ASSIST. <br>Hello, <br>Your application for an emergency manager account profile in CO-ASSIST is now approved. Please click on this link : {0} to confirm your account. Thank you, <br>Colorado Division of Homeland Security and Emergency Management
   
-mail.deny.subject=CO-Assist - Emergency Manager account needs denied
-mail.deny.message=CO-Assist <br> Your Emergency Manager account had been denied for questions please contact CO-Assist admin.
+mail.deny.subject=CO-ASSIST - Your Emergency Manager Application has been denied
+mail.deny.message=CO-ASSIST <br> Hello, Your application for an emergency manager profile in CO-ASSIST has not been approved. Please contact an administrator for more information. Thank you, Colorado Division of Homeland Security and Emergency Management Logistics Team
 
-mail.welcome.subject=Welcome to CO-Assist
-mail.welcome.message=Welcome to CO-Assist. <br> Your account is validated. Enjoy !
+mail.welcome.subject=Welcome to CO-ASSIST
+mail.welcome.message=Hello, <br>Thank you for registering with CO-ASSIST! Private business partnerships are a key component during response and recovery efforts to statewide emergency situations. Please access your profile at co-assist.state.co.us to keep your information current.  Thank you, <br>Colorado Division of Homeland Security and Emergency Management Logistics Team
 
-mail.contact.subject=Message from CO-Assist
+mail.contact.subject=Message from CO-ASSIST
 
-mail.reset.ask.subject=CO-Assist - New password
+mail.reset.ask.subject=CO-ASSIST - Reset Password Instructions
 # Cannot use You've unescaped here, as the single quote stops the {0}
-mail.reset.ask.message=You asked for your password to be reset.  <br> Click on this link : {0} to change your password.
+mail.reset.ask.message=Hello, We received a request to reset your CO-ASSIST password. Please click this link : {0} to change your password. Thank you, <br>Colorado Division of Homeland Security and Emergency Management Logistics Team
 
-mail.change.ask.subject=CO-Assist - Validate email
-mail.change.ask.message=You asked for your email to be changed.  <br> Click on this link : {0} to validate your email.
+#not used? Email can't be changed.
+mail.change.ask.subject=CO-ASSIST - Validate email
+mail.change.ask.message=Email change request.  <br> Click on this link : {0} to validate your email.
 
-mail.reset.fail.subject=Account Access Attempted
-mail.reset.fail.message=You (or someone else) entered this email address when trying to change the password.  However, this email address is not on our list of registered users, and so the attempted password reset has failed.
+mail.reset.fail.subject=CO-ASSIST - Account Access Attempted
+mail.reset.fail.message=This email address was entered when trying to change an account password.  However, this email address is not on our list of registered users, and so the attempted password reset has failed.
 
-mail.reset.confirm.subject=CO-Assist - New password
-mail.reset.confirm.message=Hello, <br><br> Your password has been reset.
+mail.reset.confirm.subject=CO-ASSIST - New password
+mail.reset.confirm.message=Hello, <br><br> Your password has been reset. Thank you, <br>Colorado Division of Homeland Security and Emergency Management Logistics Team
