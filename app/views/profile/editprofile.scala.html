@@ -11,15 +11,22 @@
 	});
 	</script>
 	<section id="profileMain">
+	
 		<form class="formoid-solid-dark"
-			style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS','Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+			style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS','Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 1000px; min-width: 150px"
 			method="post" action="">
 			<div class="title">
 				<h2>Business Profile</h2>
 			</div>
+			
+<table style="text-align: left; border: none" cellpadding="0" cellspacing="0">
+	<tbody>
+	<tr>
+		<td style="vertical-align: top; width: 498px; padding-left: 15px; padding-right: 15px; border-right: 2px solid rgb(52, 73, 94)">
+		<br />
+			
 			<div class="element-input">
-				<label class="title" style="font-weight:bold"><span class="required">*</span>Business
-				Name:</label>
+				<label class="title" style="font-weight:bold"><span class="required">*</span>Business Name:</label>
 				<div class="item-cont">
 					<input class="large" type="text" name="name" required="required"
 						placeholder="Business Name..." value="@profile.name" /><span class="icon-place"></span>
@@ -139,7 +146,18 @@
 				</div>
 			</div>
 			
-		<hr style="border-color:#34495E;border-width: 3px;">
+		<div class="element-phone"> <label class="title"><span class="required">*</span>Billing Phone Number:</label>
+		<div class="item-cont"> <input class="large" oninvalid="this.setCustomValidity('Phone number must be entered in format ###-###-####')" oninput="this.setCustomValidity('')" pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="24" name="billphone" required="required" placeholder="Phone Number..." value="@profile.billphone" type="tel"><span class="icon-place"></span> </div>
+		</div>
+		
+		<div class="element-email"> <label class="title"><span class="required">*</span>Billing Email:</label>
+		<div class="item-cont"> <input class="large" name="billemail" value="@profile.billemail" required="required" placeholder="Email..." type="email"><span class="icon-place"></span> </div>
+		</div>
+			
+			
+	</td>
+
+	<td style="vertical-align: top; width: 498px; padding: 15px;">
 			
 			<div class="element-name">
 				<label class="title" style="font-weight:bold"><span class="required">*</span>Business Hours Contact
@@ -235,7 +253,17 @@
 			</div>
 			
 			
-		<hr style="border-color:#34495E;border-width: 3px;">	
+	</td>
+	</tr>
+	<tr>
+	
+	<tr>
+		<td colspan="2" rowspan="1" style="padding: 0px">
+		<hr style="border-color: rgb(52, 73, 94); border-width: 3px; padding: 0px">
+		</td>
+	<tr>
+		<td colspan="2" rowspan="1" style="vertical-align: top; padding-left: 30px; padding-right: 30px">
+	
 			
 			<div class="element-checkbox">
 				<label class="title">Services Provided:<span class="required">*</span></label>
@@ -255,8 +283,14 @@
 							placeholder="Other..." value="@profile.servicesOther" /><span class="icon-place"></span>
 					</div>
 				</div>
-				<span class="clearfix"></span>
-			</div>
+								
+	</td>
+	</tr>
+</tbody>
+</table>				
+				
+				
+		<span class="clearfix"></span>
 			<div class="element-input">
 				@if(profileForm.hasGlobalErrors) {
 					<span class="errorMessageDisplay" style="color: #d9534f;">@profileForm.globalError.message</span>

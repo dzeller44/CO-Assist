@@ -12,11 +12,19 @@
 	</script>
 	<section id="profileMain">
 		<form class="formoid-solid-dark"
-			style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS','Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 480px; min-width: 150px"
+			style="background-color: #FFFFFF; font-size: 14px; font-family: 'Trebuchet MS','Roboto', Arial, Helvetica, sans-serif; color: #34495E; max-width: 1000px; min-width: 150px"
 			method="post" action="">
+			
 			<div class="title">
 				<h2>Business Profile</h2>
 			</div>
+			
+<table style="text-align: left; border: none" cellpadding="0" cellspacing="0">
+	<tbody>
+	<tr>
+		<td style="vertical-align: top; width: 498px; padding-left: 15px; padding-right: 15px; border-right: 2px solid rgb(52, 73, 94)">
+		<br />
+				
 			<div class="element-input readonly">
 				<label class="title" style="font-weight:bold"><span class="required">*</span>Business
 				Name:</label>
@@ -27,9 +35,7 @@
 			</div>
 			<div class="element-address">
 				<label class="title"><span class="required">*</span>Business Address:</label><span class="addr1"><input readonly placeholder="Street Address" type="text" name="address" required="required" value="@profile.address" /><span class="icon-place"></span></span><span class="addr2"><input readonly placeholder="Address Line 2" type="text" name="address1" value="@profile.address1" /><span class="icon-place"></span></span><span class="city"><input readonly placeholder="City" type="text" name="city" value="@profile.city" /><span class="icon-place"></span></span><span class="state"><input readonly placeholder="State / Province / Region" type="text" name="state" required="required" value="@profile.state" /><span class="icon-place"></span></span><span class="zip"><input readonly placeholder="Postal / Zip Code" type="text" maxlength="15" name="zip" required="required" value="@profile.zip" /><span class="icon-place"></span></span><div class="country">
-					<span>
-						Country: @profile.country
-					</span>
+					<span>Country: @profile.country</span>
 				</div>
 				<div class="element-select">
 					<label class="title"></label>
@@ -42,6 +48,7 @@
 					</div>
 				</div>
 			</div>
+
 			
 		<hr style="border-color:#34495E;border-width: 3px;">	
 			
@@ -54,21 +61,22 @@
 			</div>
 			<div class="element-address">
 				<label class="title"><span class="required">*</span>Billing Address:</label><span class="addr1"><input readonly placeholder="Street Address" type="text" name="billaddress" required="required" value="@profile.billaddress" /><span class="icon-place"></span></span><span class="addr2"><input readonly placeholder="Address Line 2" type="text" name="billaddress1" value="@profile.billaddress1" /><span class="icon-place"></span></span><span class="city"><input readonly placeholder="City" type="text" name="billcity" value="@profile.billcity" /><span class="icon-place"></span></span><span class="state"><input readonly placeholder="State / Province / Region" type="text" name="billstate" required="required" value="@profile.billstate" /><span class="icon-place"></span></span><span class="zip"><input readonly placeholder="Postal / Zip Code" type="text" maxlength="15" name="billzip" required="required" value="@profile.billzip" /><span class="icon-place"></span></span><div class="country">
-					<select name="billcountry" required="required">
-						@if(profile.billcountry != "United States") {
-							<option value="United States">United States</option>
-							<option selected="selected" value="Canada">Canada</option>
-						}
-						else {
-							<option selected="selected" value="United States">United States</option>
-							<option value="Canada">Canada</option>
-						}
-					</select>
-					<i></i><span class="icon-place"></span>
+					<span>Country: @profile.billcountry</span>
 				</div>
 			</div>
 			
-		<hr style="border-color:#34495E;border-width: 3px;">	
+						
+			<div class="element-phone"> <label class="title"><span class="required">*</span>Billing Phone Number:</label>
+			<div class="item-cont"> <input readonly class="large" oninvalid="this.setCustomValidity('Phone number must be entered in format ###-###-####')" oninput="this.setCustomValidity('')" pattern="\d{3}[\-]\d{3}[\-]\d{4}" maxlength="24" name="billphone" required="required" placeholder="Phone Number..." value="@profile.billphone" type="tel"><span class="icon-place"></span> </div>
+			</div>
+		
+			<div class="element-email"> <label class="title"><span class="required">*</span>Billing Email:</label>
+			<div class="item-cont"> <input readonly class="large" name="billemail" value="@profile.billemail" required="required" placeholder="Email..." type="email"><span class="icon-place"></span> </div>
+			</div>
+						
+	</td>
+
+	<td style="vertical-align: top; width: 498px; padding: 15px;">
 			
 			<div class="element-name">
 				<label class="title" style="font-weight:bold"><span class="required">*</span>Business Hours Contact
@@ -162,12 +170,25 @@
 			</div>
 			
 			
-		<hr style="border-color:#34495E;border-width: 3px;">	
+	</td>
+	</tr>
+	<tr>
+	
+	<tr>
+		<td colspan="2" rowspan="1" style="padding: 0px">
+		<hr style="border-color: rgb(52, 73, 94); border-width: 3px; padding: 0px">
+		</td>
+	<tr>
+		<td colspan="2" rowspan="1" style="vertical-align: top; padding-left: 30px; padding-right: 30px">
+
 		
 			<span style="font-weight:bold">&nbsp;&nbsp;&nbsp;Services Provided: </span><span>@profile.services</span><br />
 			<span style="font-weight:bold">&nbsp;&nbsp;&nbsp;Other Services: </span><span>@profile.servicesOther</span>
 			<br /><br />
-			
+	</td>
+	</tr>
+</tbody>
+</table>			
 
 			<div class="submit">
 				<a href="/manager" class="buttonCancel">@Messages("goback")</a>
