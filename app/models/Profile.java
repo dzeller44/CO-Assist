@@ -67,6 +67,12 @@ public class Profile extends Model {
 	public String billcountry;
 
 	@Constraints.Required
+	public String billphone;
+	
+	@Constraints.Required
+	public String billemail;
+
+	@Constraints.Required
 	public String primaryNameFirst;
 
 	@Constraints.Required

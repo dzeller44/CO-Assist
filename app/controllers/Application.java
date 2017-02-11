@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 import java.util.Calendar;
+import java.util.TimeZone;
 import javax.inject.Inject;
 import org.apache.commons.mail.EmailException;
 import com.opencsv.CSVWriter;
@@ -365,10 +366,8 @@ public class Application extends Controller {
 	
 			// Save the user...
 			user.updatedBy = AccessMiddleware.getSessionEmail();
-			user.dateUpdated = new Date();
-			
-			System.out.println("New role for user: "+user.role + " new name : " + user.fullname);
-			
+			user.dateUpdated = new Date();  //sets to date/time/timezone on server.
+		
 			user.save();
 	
 			AuditLog.setLog(AccessMiddleware.getSessionID(), AccessMiddleware.getSessionEmail(), "User Account",
@@ -758,7 +757,13 @@ public class Application extends Controller {
 	
 		@Constraints.Required
 		public String billcountry;
-	
+		
+		@Constraints.Required
+		public String billphone;
+		
+		@Constraints.Required
+		public String billemail;
+		
 		@Constraints.Required
 		public String primaryEmail;
 	
@@ -860,6 +865,14 @@ public class Application extends Controller {
 			}
 	
 			if (isBlank(billcountry)) {
+				return "Billing Address Country is required";
+			}
+			
+			if (isBlank(billphone)) {
+				return "Billing Address Country is required";
+			}
+			
+			if (isBlank(billemail)) {
 				return "Billing Address Country is required";
 			}
 	
@@ -966,6 +979,8 @@ public class Application extends Controller {
 		profile.billstate = profileForm.billstate;
 		profile.billzip = profileForm.billzip;
 		profile.billcountry = profileForm.billcountry;
+		profile.billphone = profileForm.billphone;
+		profile.billemail = profileForm.billemail;
 	
 		profile.primaryNameFirst = profileForm.primaryNameFirst;
 		profile.primaryNameLast = profileForm.primaryNameLast;
@@ -1037,6 +1052,8 @@ public class Application extends Controller {
 		profile.billstate = profileForm.billstate;
 		profile.billzip = profileForm.billzip;
 		profile.billcountry = profileForm.billcountry;
+		profile.billphone = profileForm.billphone;
+		profile.billemail = profileForm.billemail;
 	
 		profile.primaryNameFirst = profileForm.primaryNameFirst;
 		profile.primaryNameLast = profileForm.primaryNameLast;
@@ -1100,6 +1117,8 @@ public class Application extends Controller {
 			profile.billstate = profileForm.billstate;
 			profile.billzip = profileForm.billzip;
 			profile.billcountry = profileForm.billcountry;
+			profile.billphone = profileForm.billphone;
+			profile.billemail = profileForm.billemail;
 	
 			profile.primaryNameFirst = profileForm.primaryNameFirst;
 			profile.primaryNameLast = profileForm.primaryNameLast;
@@ -1170,6 +1189,8 @@ public class Application extends Controller {
 			removedProfile.billstate = profile.billstate;
 			removedProfile.billzip = profile.billzip;
 			removedProfile.billcountry = profile.billcountry;
+			removedProfile.billphone = profile.billphone;
+			removedProfile.billemail = profile.billemail;
 
 			removedProfile.primaryNameFirst = profile.primaryNameFirst;
 			removedProfile.primaryNameLast = profile.primaryNameLast;
