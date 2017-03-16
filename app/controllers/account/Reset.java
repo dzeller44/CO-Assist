@@ -188,6 +188,19 @@ public class Reset extends Controller {
 			flash("error", Messages.get("error.expiredresetlink"));
 			return badRequest(reset.render(resetForm, token));
 		}
+		
+		User user = User.find.byId(resetToken.userId);
+		if (user == null) {
+			// display no detail (email unknown for example) to
+			// avoir check email by foreigner
+			flash("error", Messages.get("error.technical"));
+			return badRequest(reset.render(resetForm, token));
+		}
+		
+		//cw new admins need to be validated in addition to changing password, 
+		//we want to validate here, in case they exit out of the form without changing it.
+		user.validated = true;
+		user.save();
 
 		return ok(reset.render(resetForm, token));
 	}
