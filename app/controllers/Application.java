@@ -259,9 +259,8 @@ public class Application extends Controller {
 
 	}
 
-
+	//not used
 	public Result adminSearch() {
-		// NEED TO CORRECT THIS -- NEED NEW ROUTE/VIEW
 		List<User> users = User.find.all();
 		return ok(searchusers.render(users));
 	}
@@ -335,8 +334,8 @@ public class Application extends Controller {
 				user.setRole(RoleType.UNDEFINED);
 				break;
 			}
-			if(user.role == RoleType.MANAGER) {System.out.println("We have a manager");
-				
+			if(user.role == RoleType.MANAGER) 
+			{
 				if (userform.approved != null) {  
 					if (userform.approved.equals("Y")) {
 					user.approved = "Y";
@@ -357,7 +356,7 @@ public class Application extends Controller {
 					} catch (Exception e) {
 						Logger.error("Can't send deny email to denied emergency manager", e);
 						flash("error", Messages.get("error.technical"));
-					}
+						}
 					}
 				}
 			} else {

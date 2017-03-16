@@ -189,9 +189,8 @@ public class Signup extends Controller {
 			String checkPassword = Messages.get("admin.default.password");
 			user.passwordHash = Hash.createPassword(checkPassword);
 			user.userkey = user.createUserKey();
-			// user.confirmationToken = UUID.randomUUID().toString();
-			// user.confirmationToken = null;
-			// user.validated = true;
+			// user.confirmationToken = UUID.randomUUID().toString();  //admins don't need this, are validated when reset password.
+			// user.validated = true;  //admins are validated when they click the reset password link.
 			user.dateCreation = new Date();
 			user.updatedBy = AccessMiddleware.getSessionEmail();
 			user.dateUpdated = new Date();
